@@ -7,3 +7,6 @@ c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.Pro
 c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
 c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.exe
 c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.pdb
+C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormPaint.resources
+C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormSelect.resources
+C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormSetting.resources

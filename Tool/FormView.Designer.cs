@@ -28,53 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.groupBoxSetting = new System.Windows.Forms.GroupBox();
             this.groupBoxDrawing = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.buttonSelect = new System.Windows.Forms.Button();
+            this.buttonDraw = new System.Windows.Forms.Button();
+            this.buttonSettings = new System.Windows.Forms.Button();
+            this.buttonClearCounter = new System.Windows.Forms.Button();
+            this.buttonRunManual = new System.Windows.Forms.Button();
+            this.buttonRunAuto = new System.Windows.Forms.Button();
             this.groupBoxDrawing.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox
-            // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(734, 532);
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
-            // 
-            // groupBoxSetting
-            // 
-            this.groupBoxSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxSetting.AutoSize = true;
-            this.groupBoxSetting.Location = new System.Drawing.Point(752, 12);
-            this.groupBoxSetting.Name = "groupBoxSetting";
-            this.groupBoxSetting.Size = new System.Drawing.Size(280, 264);
-            this.groupBoxSetting.TabIndex = 1;
-            this.groupBoxSetting.TabStop = false;
-            this.groupBoxSetting.Text = "Thiết Lập";
-            // 
             // groupBoxDrawing
             // 
-            this.groupBoxDrawing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxDrawing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxDrawing.AutoSize = true;
             this.groupBoxDrawing.Controls.Add(this.tableLayoutPanel1);
-            this.groupBoxDrawing.Location = new System.Drawing.Point(749, 276);
+            this.groupBoxDrawing.Location = new System.Drawing.Point(799, 12);
             this.groupBoxDrawing.Name = "groupBoxDrawing";
-            this.groupBoxDrawing.Size = new System.Drawing.Size(283, 268);
+            this.groupBoxDrawing.Size = new System.Drawing.Size(173, 687);
             this.groupBoxDrawing.TabIndex = 2;
             this.groupBoxDrawing.TabStop = false;
-            this.groupBoxDrawing.Text = "Vẽ";
+            this.groupBoxDrawing.Text = "Điều Khiển";
             // 
             // tableLayoutPanel1
             // 
@@ -82,64 +59,130 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.buttonSelect, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonDraw, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSettings, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buttonClearCounter, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.buttonRunManual, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.buttonRunAuto, 0, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.83333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.16666F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(267, 240);
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(157, 659);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // buttonSelect
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 56);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonDraw_Click);
+            this.buttonSelect.BackColor = System.Drawing.Color.Orange;
+            this.buttonSelect.Font = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelect.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSelect.Location = new System.Drawing.Point(3, 3);
+            this.buttonSelect.MinimumSize = new System.Drawing.Size(150, 75);
+            this.buttonSelect.Name = "buttonSelect";
+            this.buttonSelect.Size = new System.Drawing.Size(150, 75);
+            this.buttonSelect.TabIndex = 0;
+            this.buttonSelect.Text = "CHỌN HÌNH \r\nSẢN PHẨM";
+            this.buttonSelect.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
             // 
-            // textBox1
+            // buttonDraw
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 1;
+            this.buttonDraw.BackColor = System.Drawing.Color.Orange;
+            this.buttonDraw.Font = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDraw.Location = new System.Drawing.Point(3, 112);
+            this.buttonDraw.MinimumSize = new System.Drawing.Size(150, 75);
+            this.buttonDraw.Name = "buttonDraw";
+            this.buttonDraw.Size = new System.Drawing.Size(150, 75);
+            this.buttonDraw.TabIndex = 2;
+            this.buttonDraw.Text = "VẼ\r\nSẢN PHẨM";
+            this.buttonDraw.UseVisualStyleBackColor = false;
+            this.buttonDraw.Click += new System.EventHandler(this.buttonDraw_Click);
+            // 
+            // buttonSettings
+            // 
+            this.buttonSettings.BackColor = System.Drawing.Color.Orange;
+            this.buttonSettings.Font = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSettings.Location = new System.Drawing.Point(3, 221);
+            this.buttonSettings.MinimumSize = new System.Drawing.Size(150, 75);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new System.Drawing.Size(150, 75);
+            this.buttonSettings.TabIndex = 3;
+            this.buttonSettings.Text = "CÀI ĐẶT";
+            this.buttonSettings.UseVisualStyleBackColor = false;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
+            // 
+            // buttonClearCounter
+            // 
+            this.buttonClearCounter.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonClearCounter.Font = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearCounter.Location = new System.Drawing.Point(3, 330);
+            this.buttonClearCounter.MinimumSize = new System.Drawing.Size(150, 75);
+            this.buttonClearCounter.Name = "buttonClearCounter";
+            this.buttonClearCounter.Size = new System.Drawing.Size(150, 75);
+            this.buttonClearCounter.TabIndex = 4;
+            this.buttonClearCounter.Text = "XÓA ĐẾM";
+            this.buttonClearCounter.UseVisualStyleBackColor = false;
+            // 
+            // buttonRunManual
+            // 
+            this.buttonRunManual.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonRunManual.Font = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRunManual.Location = new System.Drawing.Point(3, 439);
+            this.buttonRunManual.MinimumSize = new System.Drawing.Size(150, 75);
+            this.buttonRunManual.Name = "buttonRunManual";
+            this.buttonRunManual.Size = new System.Drawing.Size(150, 75);
+            this.buttonRunManual.TabIndex = 5;
+            this.buttonRunManual.Text = "CHẠY TAY\r\nOFF";
+            this.buttonRunManual.UseVisualStyleBackColor = false;
+            this.buttonRunManual.Click += new System.EventHandler(this.buttonRunManual_Click);
+            // 
+            // buttonRunAuto
+            // 
+            this.buttonRunAuto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonRunAuto.Font = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRunAuto.Location = new System.Drawing.Point(3, 548);
+            this.buttonRunAuto.MinimumSize = new System.Drawing.Size(150, 75);
+            this.buttonRunAuto.Name = "buttonRunAuto";
+            this.buttonRunAuto.Size = new System.Drawing.Size(150, 75);
+            this.buttonRunAuto.TabIndex = 6;
+            this.buttonRunAuto.Text = "TỰ ĐỘNG\r\nOFF\r\n";
+            this.buttonRunAuto.UseVisualStyleBackColor = false;
+            this.buttonRunAuto.Click += new System.EventHandler(this.buttonRunAuto_Click);
             // 
             // FormView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 556);
+            this.ClientSize = new System.Drawing.Size(984, 711);
             this.Controls.Add(this.groupBoxDrawing);
-            this.Controls.Add(this.groupBoxSetting);
-            this.Controls.Add(this.pictureBox);
+            this.MinimumSize = new System.Drawing.Size(1000, 750);
             this.Name = "FormView";
             this.Text = "Lotus";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.groupBoxDrawing.ResumeLayout(false);
             this.groupBoxDrawing.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.GroupBox groupBoxSetting;
         private System.Windows.Forms.GroupBox groupBoxDrawing;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonSelect;
+        private System.Windows.Forms.Button buttonDraw;
+        private System.Windows.Forms.Button buttonSettings;
+        private System.Windows.Forms.Button buttonClearCounter;
+        private System.Windows.Forms.Button buttonRunManual;
+        private System.Windows.Forms.Button buttonRunAuto;
     }
 }
 
