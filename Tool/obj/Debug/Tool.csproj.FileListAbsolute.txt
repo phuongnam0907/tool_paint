@@ -10,3 +10,15 @@ c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.pdb
 C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormPaint.resources
 C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormSelect.resources
 C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormSetting.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.exe.config
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.exe
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.pdb
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.exe
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.pdb
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormPaint.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSelect.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSetting.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormView.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Properties.Resources.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
