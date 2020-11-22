@@ -38,6 +38,10 @@ namespace Tool
         {
             InitializeComponent();
 
+            //this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
             _x = pictureBox.Width / 2;
             _y = pictureBox.Height / 2;
         }
@@ -75,6 +79,11 @@ namespace Tool
                 mListCoordinates.Add(new Coordinates(_x, _y, 0));
                 Invalidate();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

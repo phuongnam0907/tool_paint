@@ -32,6 +32,7 @@
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDraw = new System.Windows.Forms.Button();
             this.textLength = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.Controls.Add(this.buttonDraw, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.textLength, 1, 0);
+            this.tableLayoutPanel.Controls.Add(this.button1, 0, 3);
             this.tableLayoutPanel.Location = new System.Drawing.Point(831, 12);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 4;
@@ -85,6 +87,16 @@
             this.textLength.Size = new System.Drawing.Size(95, 20);
             this.textLength.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 126);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormPaint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,7 +107,6 @@
             this.MinimumSize = new System.Drawing.Size(1060, 600);
             this.Name = "FormPaint";
             this.Text = "Vẽ";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
@@ -109,5 +120,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Button buttonDraw;
         private System.Windows.Forms.TextBox textLength;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -18,6 +18,13 @@ namespace Tool
         public FormView()
         {
             InitializeComponent();
+            Invalidate();
+
+            //this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            pictureBoxShow.Image = (Bitmap)Properties.Resources.error;
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
@@ -48,6 +55,7 @@ namespace Tool
             else
             {
                 buttonRunManual.Text = "CHẠY TAY\nON";
+                textBoxCurentNumber.Text = "20";
             }
             buttonRunAuto.Enabled = isRunManual;
             isRunManual = !isRunManual;
@@ -66,6 +74,16 @@ namespace Tool
             }
             buttonRunManual.Enabled = isRunAuto;
             isRunAuto = !isRunAuto;
+        }
+
+        private void pictureBoxPower_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonClearCounter_Click(object sender, EventArgs e)
+        {
+            textBoxCurentNumber.Text = "0";
         }
     }
 

@@ -10,29 +10,19 @@ using System.Windows.Forms;
 
 namespace Tool
 {
-    public partial class FormSetting : Form
+    public partial class FormLogin : Form
     {
-        FormLogin formLogin = new FormLogin();
-
-        public FormSetting()
+        public FormLogin()
         {
             InitializeComponent();
-
             //this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void buttonLoginFromSetting_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            
-            formLogin.Show();
+            this.Hide();
         }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }

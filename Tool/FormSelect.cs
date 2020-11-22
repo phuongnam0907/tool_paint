@@ -18,6 +18,9 @@ namespace Tool
         public FormSelect()
         {
             InitializeComponent();
+            //this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
             initFirstTime();
         }
 
@@ -65,12 +68,17 @@ namespace Tool
 
         private void tableLayoutPanel1_Click(object sender, EventArgs e)
         {
-            label2.Text = "Cell chosen: (" +
-                     tableLayoutPanel1.GetRow((Panel)sender) + ", " +
-                     tableLayoutPanel1.GetColumn((Panel)sender) + ")";
+            //label2.Text = "Cell chosen: (" +
+            //         tableLayoutPanel1.GetRow((Panel)sender) + ", " +
+            //         tableLayoutPanel1.GetColumn((Panel)sender) + ")";
             //MessageBox.Show("Cell chosen: (" +
             //         tableLayoutPanel1.GetRow((Panel)sender) + ", " +
             //         tableLayoutPanel1.GetColumn((Panel)sender) + ")");
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
