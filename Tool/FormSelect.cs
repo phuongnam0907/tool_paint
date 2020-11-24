@@ -14,6 +14,9 @@ namespace Tool
     {
         List<string> stringList = new List<string>();
         List<PictureBox> pictureBoxList = new List<PictureBox>();
+        String choosenImage = null;
+        public delegate void Sample(string pictureName);
+        public event Sample ChoosenSample;
 
         public FormSelect()
         {
@@ -34,14 +37,15 @@ namespace Tool
             }
 
             
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 30; i++)
             {
+                int index = i;
                 PictureBox picture = new PictureBox();
                 picture.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
                 picture.AutoSize = true;
-                picture.Image = GetImageResource(stringList[i]);
+                picture.Image = GetImageResource(stringList[index]);
                 picture.SizeMode = PictureBoxSizeMode.StretchImage;
-                picture.DoubleClick += tableLayoutPanel1_Click;
+                picture.Click += delegate (object sender, EventArgs e) { clickImage(sender, e, stringList[index]); };
                 pictureBoxList.Add(picture);
             }
             int rowCount = 0;
@@ -66,19 +70,24 @@ namespace Tool
             return (Bitmap)Properties.Resources.ResourceManager.GetObject(resourceName);
         }
 
-        private void tableLayoutPanel1_Click(object sender, EventArgs e)
+        private void clickImage(object sender, EventArgs e, string message)
         {
-            //label2.Text = "Cell chosen: (" +
-            //         tableLayoutPanel1.GetRow((Panel)sender) + ", " +
-            //         tableLayoutPanel1.GetColumn((Panel)sender) + ")";
-            //MessageBox.Show("Cell chosen: (" +
-            //         tableLayoutPanel1.GetRow((Panel)sender) + ", " +
-            //         tableLayoutPanel1.GetColumn((Panel)sender) + ")");
+            pictureBox1.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(message);
+            choosenImage = message;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void buttonChoose_Click(object sender, EventArgs e)
+        {
+            if (choosenImage != null)
+            {
+                ChoosenSample(choosenImage);
+                this.Close();
+            }
         }
     }
 }

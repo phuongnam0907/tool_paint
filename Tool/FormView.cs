@@ -18,19 +18,21 @@ namespace Tool
         public FormView()
         {
             InitializeComponent();
-            Invalidate();
 
             //this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            pictureBoxShow.Image = (Bitmap)Properties.Resources.error;
+            pictureBoxShow.Paint += pictureBoxShow_Paint;
+
+            Invalidate();
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
         {
             FormSelect formSelect = new FormSelect();
             formSelect.Show();
+            formSelect.ChoosenSample += update_ChoosenSample;
         }
 
         private void buttonDraw_Click(object sender, EventArgs e)
@@ -85,6 +87,21 @@ namespace Tool
         {
             textBoxCurentNumber.Text = "0";
         }
-    }
 
+        private void update_ChoosenSample(string pictureName)
+        {
+            pictureBoxShow.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(pictureName + "_choosen");
+        }
+
+        private void pictureBoxShow_Paint(object sender, PaintEventArgs e)
+        {
+            int widthImage = pictureBoxShow.Width - pictureBoxShow.Image.Width;
+            int heightImage = pictureBoxShow.Height - pictureBoxShow.Image.Height;
+            Padding padding = new System.Windows.Forms.Padding();
+            padding.Left = widthImage / 2;
+            padding.Top = heightImage / 2;
+            pictureBoxShow.Padding = padding;
+            Invalidate();
+        }
+    }
 }

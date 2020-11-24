@@ -87,6 +87,7 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -127,6 +128,7 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -249,7 +251,7 @@
             this.textBoxLoginUser.ForeColor = System.Drawing.Color.Red;
             this.textBoxLoginUser.Location = new System.Drawing.Point(18, 95);
             this.textBoxLoginUser.MaxLength = 7;
-            this.textBoxLoginUser.MinimumSize = new System.Drawing.Size(150, 0);
+            this.textBoxLoginUser.MinimumSize = new System.Drawing.Size(150, 4);
             this.textBoxLoginUser.Name = "textBoxLoginUser";
             this.textBoxLoginUser.Size = new System.Drawing.Size(150, 53);
             this.textBoxLoginUser.TabIndex = 2;
@@ -262,7 +264,7 @@
             this.textBoxLoginPass.ForeColor = System.Drawing.Color.Blue;
             this.textBoxLoginPass.Location = new System.Drawing.Point(18, 257);
             this.textBoxLoginPass.MaxLength = 7;
-            this.textBoxLoginPass.MinimumSize = new System.Drawing.Size(150, 0);
+            this.textBoxLoginPass.MinimumSize = new System.Drawing.Size(150, 4);
             this.textBoxLoginPass.Name = "textBoxLoginPass";
             this.textBoxLoginPass.Size = new System.Drawing.Size(150, 53);
             this.textBoxLoginPass.TabIndex = 3;
@@ -279,6 +281,7 @@
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "ĐĂNG NHẬP";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // FormLogin
             // 

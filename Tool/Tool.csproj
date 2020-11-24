@@ -153,6 +153,96 @@
     <None Include="Resources\12.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22 tron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vietnamese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17A.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20A.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21A.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22a.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\13.png" />
   </ItemGroup>
   <ItemGroup>
@@ -174,28 +264,145 @@
     <None Include="Resources\19.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\20.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\20A.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\22 tron.png" />
+    <None Include="Resources\21B.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\22tron.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\error.png" />
+    <None Include="Resources\sample_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\power.png" />
+    <None Include="Resources\sample_1_choosen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\english.png" />
+    <None Include="Resources\sample_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\vietnamese.png" />
+    <None Include="Resources\sample_2_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_3_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_4_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_5_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_6_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_7_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_8_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_9_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_10_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_11_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_12_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_13_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_14_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_15_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_16_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_17_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_18_choosen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_19_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_21.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_21_choosen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_21_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_22_choosen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample_23_choosen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
