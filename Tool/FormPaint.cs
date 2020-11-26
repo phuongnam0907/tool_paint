@@ -12,6 +12,25 @@ namespace Tool
 {
     public partial class FormPaint : Form
     {
+        //===========================================================//
+        private struct Data
+        {
+            public Data(int alpha, int beta, int delta, int length)
+            {
+                Alpha = alpha;
+                Beta = beta;
+                Delta = delta;
+                Length = length;
+            }
+
+            public int Alpha { get; }
+            public int Beta { get; }
+            public int Delta { get; }
+            public int Length { get; }
+
+            public override string ToString() => $"({Alpha}, {Beta}, {Delta}, {Length})";
+        }
+        //===========================================================//
         private struct Coordinates
         {
             public Coordinates(int x, int y, int z)
@@ -27,10 +46,13 @@ namespace Tool
 
             public override string ToString() => $"({X}, {Y}, {Z})";
         }
-
-        private int _x;
-        private int _y;
+        //===========================================================//
+        private int start_x;
+        private int start_y;
+        private int end_x;
+        private int end_y;
         List<Coordinates> mListCoordinates = new List<Coordinates>();
+        List<Data> mListData = new List<Data>();
         Bitmap mBitmap;
         Graphics mGraphics;
 
@@ -42,48 +64,95 @@ namespace Tool
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            _x = pictureBox.Width / 2;
-            _y = pictureBox.Height / 2;
         }
 
         private void pictureBox_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void drawLine(int sizeBrush)
+        {
             mBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
             using (mGraphics = Graphics.FromImage(mBitmap))
             {
-                int cX = _x;
-                int cY = _y;
+                int cX = pictureBox.Width / 2;
+                int cY = pictureBox.Height / 2;
                 int tX = 0;
                 int tY = 0;
-                mListCoordinates.Add(new Coordinates(_x, _y, 0));
                 foreach (Coordinates element in mListCoordinates)
                 {
                     tX = cX;
                     tY = cY;
                     cX = element.X;
                     cY = element.Y;
-                    mGraphics.DrawLine(new Pen(Color.Red), tX, tY, cX, cY);
+                    mGraphics.DrawLine(new Pen(Color.Red, sizeBrush), tX, tY, cX, cY);
                 }
-                mGraphics.FillRectangle(Brushes.BlueViolet, _x, _y, 10, 10);
-
+                //mGraphics.FillRectangle(Brushes.BlueViolet, cX, cY, 10, 10);
+                mGraphics.DrawImage((Bitmap)Properties.Resources.ResourceManager.GetObject("arrow"), new Point(cX, cY));
+                Invalidate();
             }
             pictureBox.Image = mBitmap;
+            Invalidate();
         }
 
         private void buttonDraw_Click(object sender, EventArgs e)
         {
-            if (textLength != null && !string.IsNullOrWhiteSpace(textLength.Text))
+            if (mListCoordinates.Count == 0)
             {
-                _x += int.Parse(textLength.Text);
-                _y += int.Parse(textLength.Text);
-                mListCoordinates.Add(new Coordinates(_x, _y, 0));
-                Invalidate();
+                start_x = pictureBox.Width / 2;
+                start_y = pictureBox.Height / 2;
+                mListCoordinates.Add(new Coordinates(start_x, start_y, 0));
+            }
+            else
+            {
+                int diameter = 1;
+                int angle = 0;
+                int length = 0;
+                if (textLength != null && !string.IsNullOrWhiteSpace(textLength.Text) && textBoxAngle != null && !string.IsNullOrWhiteSpace(textBoxAngle.Text))
+                {
+                    diameter = int.Parse(textBoxDM.Text);
+                    angle = (int.Parse(textBoxAngle.Text)) % 360;
+                    length = int.Parse(textLength.Text);
+
+                    int end_x = (int)(start_x + Math.Cos(angle * 0.017453292514) * length);
+                    int end_y = (int)(start_y + Math.Sin(angle * 0.017453292514) * length);
+
+                    mListCoordinates.Add(new Coordinates(end_x, end_y, 0));
+                    mListData.Add(new Data(angle, 0, 0, length));
+
+                    start_x = end_x;
+                    start_y = end_y;
+                    Invalidate();
+                    drawLine(diameter);
+                }
+            }
+            //MessageBox.Show("X1 - " + start_x + " X2 - " + end_x + " Y1 - " + start_y + " Y2 - " + end_y);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+            if (mListCoordinates.Count > 1)
+            {
+                mListCoordinates.RemoveAt(mListCoordinates.Count - 1);
+                mListData.RemoveAt(mListData.Count - 1);
+                drawLine(int.Parse(textBoxDM.Text));
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string txt = "Count: " + mListData.Count + "\n";
+            foreach (Data element in mListData)
+            {
+                txt += "Alpha = " + element.Alpha + " | Length = " + element.Length + " \n";
+            }
+            MessageBox.Show(txt);
         }
     }
 }
