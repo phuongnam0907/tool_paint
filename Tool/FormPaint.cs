@@ -60,14 +60,8 @@ namespace Tool
         {
             InitializeComponent();
 
-            //this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-
-        }
-
-        private void pictureBox_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -88,8 +82,7 @@ namespace Tool
                     cY = element.Y;
                     mGraphics.DrawLine(new Pen(Color.Red, sizeBrush), tX, tY, cX, cY);
                 }
-                //mGraphics.FillRectangle(Brushes.BlueViolet, cX, cY, 10, 10);
-                mGraphics.DrawImage((Bitmap)Properties.Resources.ResourceManager.GetObject("arrow"), new Point(cX, cY));
+                mGraphics.DrawImage((Bitmap)Properties.Resources.ResourceManager.GetObject("arrow"), cX-22, cY-16, 44, 32);
                 Invalidate();
             }
             pictureBox.Image = mBitmap;
@@ -104,30 +97,29 @@ namespace Tool
                 start_y = pictureBox.Height / 2;
                 mListCoordinates.Add(new Coordinates(start_x, start_y, 0));
             }
-            else
+            int diameter = 1;
+            int angle = 0;
+            int length = 0;
+            if (textLength != null && !string.IsNullOrWhiteSpace(textLength.Text) && textBoxAngle != null && !string.IsNullOrWhiteSpace(textBoxAngle.Text))
             {
-                int diameter = 1;
-                int angle = 0;
-                int length = 0;
-                if (textLength != null && !string.IsNullOrWhiteSpace(textLength.Text) && textBoxAngle != null && !string.IsNullOrWhiteSpace(textBoxAngle.Text))
+                diameter = int.Parse(textBoxDM.Text);
+                angle = (int.Parse(textBoxAngle.Text)) % 360;
+                length = int.Parse(textLength.Text) * 2;
+
+                int end_x = (int)(start_x + Math.Cos(angle * Math.PI / 180) * length);
+                int end_y = (int)(start_y + Math.Sin(angle * Math.PI / 180) * length);
+
+                if (!(start_x == end_x && start_y == end_y))
                 {
-                    diameter = int.Parse(textBoxDM.Text);
-                    angle = (int.Parse(textBoxAngle.Text)) % 360;
-                    length = int.Parse(textLength.Text);
-
-                    int end_x = (int)(start_x + Math.Cos(angle * 0.017453292514) * length);
-                    int end_y = (int)(start_y + Math.Sin(angle * 0.017453292514) * length);
-
                     mListCoordinates.Add(new Coordinates(end_x, end_y, 0));
                     mListData.Add(new Data(angle, 0, 0, length));
-
-                    start_x = end_x;
-                    start_y = end_y;
-                    Invalidate();
-                    drawLine(diameter);
                 }
+
+                start_x = end_x;
+                start_y = end_y;
+                Invalidate();
+                drawLine(diameter);
             }
-            //MessageBox.Show("X1 - " + start_x + " X2 - " + end_x + " Y1 - " + start_y + " Y2 - " + end_y);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -142,17 +134,24 @@ namespace Tool
                 mListCoordinates.RemoveAt(mListCoordinates.Count - 1);
                 mListData.RemoveAt(mListData.Count - 1);
                 drawLine(int.Parse(textBoxDM.Text));
+                start_x = mListCoordinates.ElementAt(mListCoordinates.Count - 1).X;
+                start_y = mListCoordinates.ElementAt(mListCoordinates.Count - 1).Y;
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string txt = "Count: " + mListData.Count + "\n";
-            foreach (Data element in mListData)
+            string str = "Coordinates Count: " + mListCoordinates.Count + "\n";
+            foreach (Coordinates item in mListCoordinates)
             {
-                txt += "Alpha = " + element.Alpha + " | Length = " + element.Length + " \n";
+                str += "X = " + item.X + " | Y = " + item.Y + "\n";
             }
-            MessageBox.Show(txt);
+            str += "Step Count: " + mListData.Count + "\n";
+            foreach (Data item in mListData)
+            {
+                str += "Alpha = " + item.Alpha + " | Length = " + item.Length + "\n";
+            }
+            MessageBox.Show(str);
         }
     }
 }
