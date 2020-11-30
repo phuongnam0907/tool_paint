@@ -12,6 +12,13 @@ namespace Tool
 {
     public partial class FormView : Form
     {
+        enum MATERIAL
+        {
+            IRON,
+            INOX
+        }
+
+        private MATERIAL whichMaterial = MATERIAL.INOX;
         private bool isRunAuto = false;
         private bool isRunManual = false;
 
@@ -102,6 +109,31 @@ namespace Tool
             padding.Top = heightImage / 2;
             pictureBoxShow.Padding = padding;
             Invalidate();
+        }
+
+        private void buttonChooseMaterial_Click(object sender, EventArgs e)
+        {
+            FormMaterial formMaterial = new FormMaterial();
+            formMaterial.Show();
+            formMaterial.ChoosenMaterial += update_ChoosenMaterial;
+        }
+
+        private void update_ChoosenMaterial(int material)
+        {
+            string textChoose = "SẮT";
+            switch (material)
+            {
+                case (int)MATERIAL.IRON:
+                    textChoose = "SẮT";
+                    break;
+                case (int)MATERIAL.INOX:
+                    textChoose = "INOX";
+                    break;
+                default:
+                    textChoose = "SẮT";
+                    break;
+            }
+            labelMaterial.Text = textChoose;
         }
     }
 }

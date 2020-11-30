@@ -35,3 +35,4 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\To
 C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Properties.Resources.resources
 C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormLogin.resources
+C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormMaterial.resources
