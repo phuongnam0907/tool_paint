@@ -13,6 +13,7 @@ namespace Tool
     public partial class FormSetting : Form
     {
         private int permissionUser = 0;
+        private bool isTest_tabPageTimeRunAuto = false;
 
         public FormSetting()
         {
@@ -64,6 +65,21 @@ namespace Tool
         private void buttonSaveSettings_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonStopMachine_Click(object sender, EventArgs e)
+        {
+            if (isTest_tabPageTimeRunAuto == true)
+            {
+                buttonStopMachine.Text = "BẬT";
+                buttonStopMachine.BackColor = Color.Blue;
+            }
+            else
+            {
+                buttonStopMachine.Text = "TẮT";
+                buttonStopMachine.BackColor = Color.Red;
+            }
+            isTest_tabPageTimeRunAuto = !isTest_tabPageTimeRunAuto;
         }
     }
 }
