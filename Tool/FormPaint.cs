@@ -33,18 +33,20 @@ namespace Tool
         //===========================================================//
         private struct Coordinates
         {
-            public Coordinates(int x, int y, int z)
+            public Coordinates(int d, int x, int y, int z)
             {
+                D = d;
                 X = x;
                 Y = y;
                 Z = z;
             }
 
+            public int D { get; }
             public int X { get; }
             public int Y { get; }
             public int Z { get; }
 
-            public override string ToString() => $"({X}, {Y}, {Z})";
+            public override string ToString() => $"( {D}, {X}, {Y}, {Z})";
         }
         //===========================================================//
         private int start_x;
@@ -55,6 +57,7 @@ namespace Tool
         List<Data> mListData = new List<Data>();
         Bitmap mBitmap;
         Graphics mGraphics;
+        int current_degree = 0;
 
         public FormPaint()
         {
@@ -65,25 +68,37 @@ namespace Tool
 
         }
 
-        private void drawLine(int sizeBrush)
+        private void draw(int mode, int sizeBrush)
         {
+            int degree = -90;
             mBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
             using (mGraphics = Graphics.FromImage(mBitmap))
             {
-                int cX = pictureBox.Width / 2;
-                int cY = pictureBox.Height / 2;
-                int tX = 0;
-                int tY = 0;
-                foreach (Coordinates element in mListCoordinates)
+                if (mode == 0)
                 {
-                    tX = cX;
-                    tY = cY;
-                    cX = element.X;
-                    cY = element.Y;
-                    mGraphics.DrawLine(new Pen(Color.Red, sizeBrush), tX, tY, cX, cY);
+
+                    int diaM = int.Parse(textLength.Text) / 5;
+                    int cX = pictureBox.Width / 2;
+                    int cY = pictureBox.Height / 2;
+                    int tX = 0;
+                    int tY = 0;
+                    foreach (Coordinates element in mListCoordinates)
+                    {
+                        mGraphics.DrawArc(new Pen(Color.Red, sizeBrush), cX - diaM - 5, cY - diaM, diaM, diaM, degree, element.D);
+                        degree += element.D;
+                        tX = cX;
+                        tY = cY;
+                        cX = element.X;
+                        cY = element.Y;
+                        mGraphics.DrawLine(new Pen(Color.Red, sizeBrush), tX, tY, cX, cY);
+                    }
+                    mGraphics.DrawImage((Bitmap)Properties.Resources.ResourceManager.GetObject("arrow"), cX - 22, cY - 16, 44, 32);
+                    Invalidate();
                 }
-                mGraphics.DrawImage((Bitmap)Properties.Resources.ResourceManager.GetObject("arrow"), cX-22, cY-16, 44, 32);
-                Invalidate();
+                else if (mode == 2)
+                {
+                    mGraphics.DrawArc(new Pen(Color.Red, sizeBrush), );
+                }
             }
             pictureBox.Image = mBitmap;
             Invalidate();
@@ -91,34 +106,83 @@ namespace Tool
 
         private void buttonDraw_Click(object sender, EventArgs e)
         {
+            int diameter = 1;
+            int angle = 0;
+            int length = 0;
+            double length_radius = 0;
+            int radius = 0;
+            int degree = 0;
             if (mListCoordinates.Count == 0)
             {
                 start_x = pictureBox.Width / 2;
                 start_y = pictureBox.Height / 2;
-                mListCoordinates.Add(new Coordinates(start_x, start_y, 0));
+                mListCoordinates.Add(new Coordinates(0, start_x, start_y, 0));
             }
-            int diameter = 1;
-            int angle = 0;
-            int length = 0;
-            if (textLength != null && !string.IsNullOrWhiteSpace(textLength.Text) && textBoxAngle != null && !string.IsNullOrWhiteSpace(textBoxAngle.Text))
+            if (tabControl1.SelectedIndex == 0)
             {
-                diameter = int.Parse(textBoxDM.Text);
-                angle = (int.Parse(textBoxAngle.Text)) % 360;
-                length = int.Parse(textLength.Text) * 2;
-
-                int end_x = (int)(start_x + Math.Cos(angle * Math.PI / 180) * length);
-                int end_y = (int)(start_y + Math.Sin(angle * Math.PI / 180) * length);
-
-                if (!(start_x == end_x && start_y == end_y))
+                if (textLength != null && !string.IsNullOrWhiteSpace(textLength.Text) && textBoxDegreeOut != null && !string.IsNullOrWhiteSpace(textBoxDegreeOut.Text))
                 {
-                    mListCoordinates.Add(new Coordinates(end_x, end_y, 0));
-                    mListData.Add(new Data(angle, 0, 0, length));
-                }
+                    diameter = int.Parse(textBoxDM.Text);
+                    angle = (int.Parse(textBoxDegreeOut.Text)) % 360;
+                    length = int.Parse(textLength.Text) * 2;
 
-                start_x = end_x;
-                start_y = end_y;
-                Invalidate();
-                drawLine(diameter);
+                    current_degree += angle;
+                    if (current_degree >= 360) current_degree = current_degree % 360;
+
+                    int end_x = (int)(start_x + Math.Cos(current_degree * Math.PI / 180) * length);
+                    int end_y = (int)(start_y + Math.Sin(current_degree * Math.PI / 180) * length);
+
+                    if (!(start_x == end_x && start_y == end_y))
+                    {
+                        mListCoordinates.Add(new Coordinates(angle, end_x, end_y, 0));
+                        mListData.Add(new Data(angle, 0, 0, length));
+                    }
+
+                    start_x = end_x;
+                    start_y = end_y;
+                    Invalidate();
+                    draw(0, diameter);
+                }
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                if (textBoxRadius != null && !string.IsNullOrWhiteSpace(textBoxRadius.Text) && textBoxDegree != null && !string.IsNullOrWhiteSpace(textBoxDegree.Text))
+                {
+                    diameter = int.Parse(textBoxDM1.Text);
+                    degree = (int.Parse(textBoxDegree.Text));
+                    radius = int.Parse(textBoxRadius.Text);
+                    length_radius = (Math.PI * radius * degree) / 180;
+
+                    MessageBox.Show(length_radius.ToString());
+                    current_degree += degree;
+                    if (current_degree >= 360) current_degree = current_degree % 360;
+
+                    //int end_x = (int)(start_x + Math.Cos(current_degree * Math.PI / 180) * length);
+                    //int end_y = (int)(start_y + Math.Sin(current_degree * Math.PI / 180) * length);
+
+                    //    mListCoordinates.Add(new Coordinates(angle, end_x, end_y, 0));
+                    //    mListData.Add(new Data(angle, 0, 0, length));
+
+                    //start_x = end_x;
+                    //start_y = end_y;
+                    Invalidate();
+                    draw(0, diameter);
+                }
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                if (textBoxRadiusCircle != null && !string.IsNullOrWhiteSpace(textBoxRadiusCircle.Text) && textBoxNumberCircle != null && !string.IsNullOrWhiteSpace(textBoxNumberCircle.Text))
+                {
+                    int r = int.Parse(textBoxRadiusCircle.Text);
+                    int end_x = (int)(start_x + Math.Cos(current_degree * Math.PI / 180) * r);
+                    int end_y = (int)(start_y + Math.Sin(current_degree * Math.PI / 180) * r);
+
+                    //mListCoordinates.Add(new Coordinates(angle, end_x, end_y, 0));
+                    //mListData.Add(new Data(angle, 0, 0, length));
+
+                    Invalidate();
+                    draw(2, diameter);
+                }
             }
         }
 
@@ -136,22 +200,24 @@ namespace Tool
                 drawLine(int.Parse(textBoxDM.Text));
                 start_x = mListCoordinates.ElementAt(mListCoordinates.Count - 1).X;
                 start_y = mListCoordinates.ElementAt(mListCoordinates.Count - 1).Y;
+                current_degree = mListCoordinates.ElementAt(mListCoordinates.Count - 1).D;
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string str = "Coordinates Count: " + mListCoordinates.Count + "\n";
-            foreach (Coordinates item in mListCoordinates)
-            {
-                str += "X = " + item.X + " | Y = " + item.Y + "\n";
-            }
-            str += "Step Count: " + mListData.Count + "\n";
-            foreach (Data item in mListData)
-            {
-                str += "Alpha = " + item.Alpha + " | Length = " + item.Length + "\n";
-            }
-            MessageBox.Show(str);
+            //string str = "Coordinates Count: " + mListCoordinates.Count + "\n";
+            //foreach (Coordinates item in mListCoordinates)
+            //{
+            //    str += "D = " + item.D + "X = " + item.X + " | Y = " + item.Y + "\n";
+            //}
+            //str += "Step Count: " + mListData.Count + "\n";
+            //foreach (Data item in mListData)
+            //{
+            //    str += "Alpha = " + item.Alpha + " | Length = " + item.Length + "\n";
+            //}
+            //MessageBox.Show(str);
+            MessageBox.Show(tabControl1.SelectedIndex.ToString());
         }
 
     }
