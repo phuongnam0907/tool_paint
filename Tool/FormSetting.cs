@@ -33,6 +33,7 @@ namespace Tool
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            permissionUser = 0;
             this.Close();
         }
 

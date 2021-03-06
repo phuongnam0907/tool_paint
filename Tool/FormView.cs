@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +26,10 @@ namespace Tool
         public FormView()
         {
             InitializeComponent();
+
+            // Mini version
+            buttonDraw.Visible = false;
+            RemoveArbitraryRow(tableLayoutPanel1, 2);
 
             //this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
@@ -60,10 +65,12 @@ namespace Tool
             if (isRunManual)
             {
                 buttonRunManual.Text = "CHẠY TAY\nOFF";
+                buttonRunAuto.BackColor = Color.CornflowerBlue;
             }
             else
             {
                 buttonRunManual.Text = "CHẠY TAY\nON";
+                buttonRunAuto.BackColor = Color.Lavender;
                 textBoxCurentNumber.Text = "20";
             }
             buttonRunAuto.Enabled = isRunManual;
@@ -76,10 +83,12 @@ namespace Tool
             if (isRunAuto)
             {
                 buttonRunAuto.Text = "TỰ ĐỘNG\nOFF";
+                buttonRunManual.BackColor = Color.CornflowerBlue;
             }
             else
             {
                 buttonRunAuto.Text = "TỰ ĐỘNG\nON";
+                buttonRunManual.BackColor = Color.Lavender;
             }
             buttonRunManual.Enabled = isRunAuto;
             isRunAuto = !isRunAuto;
@@ -133,7 +142,48 @@ namespace Tool
                     textChoose = "SẮT";
                     break;
             }
-            labelMaterial.Text = textChoose;
+            buttonChooseMaterial.BackColor = Color.LightGreen;
+            buttonChooseMaterial.Font = new System.Drawing.Font("Times New Roman", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            buttonChooseMaterial.AutoSize = true;
+            buttonChooseMaterial.Location = new System.Drawing.Point(37, 123);
+            buttonChooseMaterial.Size = new System.Drawing.Size(83, 38);
+            buttonChooseMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            buttonChooseMaterial.Text = textChoose;
+        }
+
+        public static void RemoveArbitraryRow(TableLayoutPanel panel, int rowIndex)
+        {
+            if (rowIndex >= panel.RowCount)
+            {
+                return;
+            }
+
+            // delete all controls of row that we want to delete
+            for (int i = 0; i < panel.ColumnCount; i++)
+            {
+                var control = panel.GetControlFromPosition(i, rowIndex);
+                panel.Controls.Remove(control);
+            }
+
+            // move up row controls that comes after row we want to remove
+            for (int i = rowIndex + 1; i < panel.RowCount; i++)
+            {
+                for (int j = 0; j < panel.ColumnCount; j++)
+                {
+                    var control = panel.GetControlFromPosition(j, i);
+                    if (control != null)
+                    {
+                        panel.SetRow(control, i - 1);
+                    }
+                }
+            }
+
+            var removeStyle = panel.RowCount - 1;
+
+            if (panel.RowStyles.Count > removeStyle)
+                panel.RowStyles.RemoveAt(removeStyle);
+
+            panel.RowCount--;
         }
     }
 }

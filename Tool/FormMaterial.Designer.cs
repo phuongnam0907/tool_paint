@@ -113,7 +113,7 @@
             this.Name = "FormMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMaterial";
-            this.TopMost = true;
+            //this.TopMost = true;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -25,7 +25,8 @@ namespace Tool
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
+            this.Close();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)

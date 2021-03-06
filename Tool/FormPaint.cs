@@ -97,7 +97,7 @@ namespace Tool
                 }
                 else if (mode == 2)
                 {
-                    mGraphics.DrawArc(new Pen(Color.Red, sizeBrush), );
+                    //mGraphics.DrawArc(new Pen(Color.Red, sizeBrush), );
                 }
             }
             pictureBox.Image = mBitmap;
@@ -197,7 +197,7 @@ namespace Tool
             {
                 mListCoordinates.RemoveAt(mListCoordinates.Count - 1);
                 mListData.RemoveAt(mListData.Count - 1);
-                drawLine(int.Parse(textBoxDM.Text));
+                //drawLine(int.Parse(textBoxDM.Text));
                 start_x = mListCoordinates.ElementAt(mListCoordinates.Count - 1).X;
                 start_y = mListCoordinates.ElementAt(mListCoordinates.Count - 1).Y;
                 current_degree = mListCoordinates.ElementAt(mListCoordinates.Count - 1).D;
