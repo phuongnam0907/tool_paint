@@ -37,8 +37,7 @@ namespace Tool
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || (!username.Equals(password)))
             {
-                MessageBox.Show("Wrong username or password", "Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Wrong username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
             }
 

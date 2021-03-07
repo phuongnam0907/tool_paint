@@ -50,3 +50,4 @@ C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSetting.reso
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormView.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Properties.Resources.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Keypad.resources

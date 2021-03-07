@@ -22,6 +22,8 @@ namespace Tool
         private MATERIAL whichMaterial = MATERIAL.INOX;
         private bool isRunAuto = false;
         private bool isRunManual = false;
+        private bool isKeypadShown = false;
+        Keypad numKey = new Keypad();
 
         public FormView()
         {
@@ -36,8 +38,13 @@ namespace Tool
             this.WindowState = FormWindowState.Maximized;
 
             pictureBoxShow.Paint += pictureBoxShow_Paint;
-
+            numKey.SetNumber += NumKey_SetNumber;
             Invalidate();
+        }
+
+        private void NumKey_SetNumber(int num)
+        {
+            textBoxG1.Text += num.ToString();
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
@@ -184,6 +191,61 @@ namespace Tool
                 panel.RowStyles.RemoveAt(removeStyle);
 
             panel.RowCount--;
+        }
+
+        private void textBoxG1_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxG2_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxG3_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxG4_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxTotalNumber_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL2_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL3_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL4_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL5_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL6_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL7_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
         }
     }
 }

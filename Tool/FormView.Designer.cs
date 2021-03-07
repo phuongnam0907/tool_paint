@@ -295,6 +295,7 @@
             this.textBoxL2.TabIndex = 1;
             this.textBoxL2.Text = "0";
             this.textBoxL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL2_MouseDown);
             // 
             // textBoxL3
             // 
@@ -307,6 +308,7 @@
             this.textBoxL3.TabIndex = 2;
             this.textBoxL3.Text = "0";
             this.textBoxL3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL3_MouseDown);
             // 
             // textBoxL4
             // 
@@ -319,6 +321,7 @@
             this.textBoxL4.TabIndex = 3;
             this.textBoxL4.Text = "0";
             this.textBoxL4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL4_MouseDown);
             // 
             // textBoxL5
             // 
@@ -331,6 +334,7 @@
             this.textBoxL5.TabIndex = 4;
             this.textBoxL5.Text = "0";
             this.textBoxL5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL5_MouseDown);
             // 
             // textBoxL6
             // 
@@ -343,6 +347,7 @@
             this.textBoxL6.TabIndex = 5;
             this.textBoxL6.Text = "0";
             this.textBoxL6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL6_MouseDown);
             // 
             // label1
             // 
@@ -459,6 +464,7 @@
             this.textBoxL7.TabIndex = 18;
             this.textBoxL7.Text = "0";
             this.textBoxL7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL7_MouseDown);
             // 
             // tableLayoutPanel3
             // 
@@ -539,6 +545,7 @@
             this.textBoxG4.TabIndex = 15;
             this.textBoxG4.Text = "0";
             this.textBoxG4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxG4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxG4_MouseDown);
             // 
             // label8
             // 
@@ -565,6 +572,7 @@
             this.textBoxG1.TabIndex = 1;
             this.textBoxG1.Text = "0";
             this.textBoxG1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxG1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxG1_MouseDown);
             // 
             // textBoxG2
             // 
@@ -578,6 +586,7 @@
             this.textBoxG2.TabIndex = 2;
             this.textBoxG2.Text = "0";
             this.textBoxG2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxG2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxG2_MouseDown);
             // 
             // textBoxG3
             // 
@@ -591,6 +600,7 @@
             this.textBoxG3.TabIndex = 3;
             this.textBoxG3.Text = "0";
             this.textBoxG3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxG3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxG3_MouseDown);
             // 
             // label9
             // 
@@ -698,6 +708,7 @@
             this.textBoxTotalNumber.TabIndex = 5;
             this.textBoxTotalNumber.Text = "0";
             this.textBoxTotalNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTotalNumber.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTotalNumber_MouseDown);
             // 
             // textBoxCurentNumber
             // 
