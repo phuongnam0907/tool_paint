@@ -283,6 +283,7 @@
             this.textBoxL1.TabIndex = 0;
             this.textBoxL1.Text = "0";
             this.textBoxL1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxL1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxL1_MouseDown);
             // 
             // textBoxL2
             // 

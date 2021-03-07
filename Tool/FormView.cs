@@ -31,6 +31,7 @@ namespace Tool
 
             // Mini version
             buttonDraw.Visible = false;
+            pictureBoxEnglish.Visible = false;
             RemoveArbitraryRow(tableLayoutPanel1, 2);
 
             //this.TopMost = true;
@@ -38,13 +39,9 @@ namespace Tool
             this.WindowState = FormWindowState.Maximized;
 
             pictureBoxShow.Paint += pictureBoxShow_Paint;
-            numKey.SetNumber += NumKey_SetNumber;
-            Invalidate();
-        }
 
-        private void NumKey_SetNumber(int num)
-        {
-            textBoxG1.Text += num.ToString();
+            Invalidate();
+
         }
 
         private void buttonSelect_Click(object sender, EventArgs e)
@@ -195,11 +192,13 @@ namespace Tool
 
         private void textBoxG1_MouseDown(object sender, MouseEventArgs e)
         {
+            numKey.setTextBox(textBoxG1);
             numKey.Show();
         }
 
         private void textBoxG2_MouseDown(object sender, MouseEventArgs e)
         {
+            numKey.setTextBox(textBoxG2);
             numKey.Show();
         }
 
@@ -244,6 +243,11 @@ namespace Tool
         }
 
         private void textBoxL7_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.Show();
+        }
+
+        private void textBoxL1_MouseDown(object sender, MouseEventArgs e)
         {
             numKey.Show();
         }
