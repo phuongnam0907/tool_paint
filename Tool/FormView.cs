@@ -204,51 +204,61 @@ namespace Tool
 
         private void textBoxG3_MouseDown(object sender, MouseEventArgs e)
         {
+            numKey.setTextBox(textBoxG3);
             numKey.Show();
         }
 
         private void textBoxG4_MouseDown(object sender, MouseEventArgs e)
         {
+            numKey.setTextBox(textBoxG4);
             numKey.Show();
         }
 
         private void textBoxTotalNumber_MouseDown(object sender, MouseEventArgs e)
         {
-            numKey.Show();
-        }
-
-        private void textBoxL2_MouseDown(object sender, MouseEventArgs e)
-        {
-            numKey.Show();
-        }
-
-        private void textBoxL3_MouseDown(object sender, MouseEventArgs e)
-        {
-            numKey.Show();
-        }
-
-        private void textBoxL4_MouseDown(object sender, MouseEventArgs e)
-        {
-            numKey.Show();
-        }
-
-        private void textBoxL5_MouseDown(object sender, MouseEventArgs e)
-        {
-            numKey.Show();
-        }
-
-        private void textBoxL6_MouseDown(object sender, MouseEventArgs e)
-        {
-            numKey.Show();
-        }
-
-        private void textBoxL7_MouseDown(object sender, MouseEventArgs e)
-        {
+            numKey.setTextBox(textBoxTotalNumber);
             numKey.Show();
         }
 
         private void textBoxL1_MouseDown(object sender, MouseEventArgs e)
         {
+            numKey.setTextBox(textBoxL1);
+            numKey.Show();
+        }
+
+        private void textBoxL2_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxL2);
+            numKey.Show();
+        }
+
+        private void textBoxL3_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxL3);
+            numKey.Show();
+        }
+
+        private void textBoxL4_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxL4);
+            numKey.Show();
+        }
+
+        private void textBoxL5_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxL5);
+            numKey.Show();
+        }
+
+        private void textBoxL6_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxL6);
+            numKey.Show();
+        }
+
+        private void textBoxL7_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxL7);
             numKey.Show();
         }
     }

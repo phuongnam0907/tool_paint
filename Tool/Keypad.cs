@@ -202,13 +202,34 @@ namespace Tool
         {
             if (textBox.Text.Length > 0)
             {
-                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1, 1);
+                string tmp = textBox.Text.Remove(textBox.Text.Length - 1, 1); ;
+                textBox.Text = tmp;
             }
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void pictureBoxDelete_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBoxDelete.BackColor = Color.Silver;
+        }
+
+        private void pictureBoxDelete_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBoxDelete.BackColor = Color.Transparent;
+        }
+
+        private void pictureBoxEnter_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBoxEnter.BackColor = Color.LightCyan;
+        }
+
+        private void pictureBoxEnter_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBoxEnter.BackColor = Color.Transparent;
         }
     }
 }

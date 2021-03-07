@@ -51,3 +51,7 @@ C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormView.resourc
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Properties.Resources.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Keypad.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormLogin.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormMaterial.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Keypad.resources
+C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.ExitApp.resources

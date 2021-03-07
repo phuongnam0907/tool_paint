@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonInox = new System.Windows.Forms.Button();
+            this.buttonIron = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonIron = new System.Windows.Forms.Button();
-            this.buttonInox = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,30 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(560, 108);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // buttonInox
+            // 
+            this.buttonInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInox.Location = new System.Drawing.Point(179, 11);
+            this.buttonInox.Name = "buttonInox";
+            this.buttonInox.Size = new System.Drawing.Size(146, 85);
+            this.buttonInox.TabIndex = 2;
+            this.buttonInox.Text = "INOX";
+            this.buttonInox.UseVisualStyleBackColor = true;
+            this.buttonInox.Click += new System.EventHandler(this.buttonInox_Click);
+            // 
+            // buttonIron
+            // 
+            this.buttonIron.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonIron.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIron.Location = new System.Drawing.Point(11, 11);
+            this.buttonIron.Name = "buttonIron";
+            this.buttonIron.Size = new System.Drawing.Size(146, 85);
+            this.buttonIron.TabIndex = 1;
+            this.buttonIron.Text = "SẮT";
+            this.buttonIron.UseVisualStyleBackColor = true;
+            this.buttonIron.Click += new System.EventHandler(this.buttonIron_Click);
             // 
             // buttonBack
             // 
@@ -77,30 +101,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CHỌN CHẤT LIỆU";
             // 
-            // buttonIron
-            // 
-            this.buttonIron.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonIron.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIron.Location = new System.Drawing.Point(11, 11);
-            this.buttonIron.Name = "buttonIron";
-            this.buttonIron.Size = new System.Drawing.Size(146, 85);
-            this.buttonIron.TabIndex = 1;
-            this.buttonIron.Text = "SẮT";
-            this.buttonIron.UseVisualStyleBackColor = true;
-            this.buttonIron.Click += new System.EventHandler(this.buttonIron_Click);
-            // 
-            // buttonInox
-            // 
-            this.buttonInox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInox.Location = new System.Drawing.Point(179, 11);
-            this.buttonInox.Name = "buttonInox";
-            this.buttonInox.Size = new System.Drawing.Size(146, 85);
-            this.buttonInox.TabIndex = 2;
-            this.buttonInox.Text = "INOX";
-            this.buttonInox.UseVisualStyleBackColor = true;
-            this.buttonInox.Click += new System.EventHandler(this.buttonInox_Click);
-            // 
             // FormMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,12 +108,12 @@
             this.ClientSize = new System.Drawing.Size(584, 261);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(600, 300);
             this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "FormMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMaterial";
-            //this.TopMost = true;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
