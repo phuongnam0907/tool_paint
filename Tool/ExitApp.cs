@@ -12,9 +12,24 @@ namespace Tool
 {
     public partial class ExitApp : Form
     {
-        public ExitApp()
+        FormView formView;
+        public ExitApp(FormView form)
         {
+            
             InitializeComponent();
+            this.formView = form;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.formView.Close();
         }
     }
 }

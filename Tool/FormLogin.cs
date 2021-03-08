@@ -14,6 +14,7 @@ namespace Tool
     {
         public delegate void Login(int permissionUser);
         public event Login LoginEvent;
+        Keypad numKey = new Keypad();
 
         public FormLogin()
         {
@@ -25,7 +26,7 @@ namespace Tool
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            numKey.Close();
             this.Close();
         }
 
@@ -50,12 +51,26 @@ namespace Tool
             if (LoginEvent != null)
             {
                 LoginEvent(permissionUser);
+                numKey.Close();
                 this.Close();
             }
             else
             {
+                numKey.Close();
                 this.Close();
             }
+        }
+
+        private void textBoxLoginUser_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxLoginUser);
+            numKey.Show();
+        }
+
+        private void textBoxLoginPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxLoginPass);
+            numKey.Show();
         }
     }
 }

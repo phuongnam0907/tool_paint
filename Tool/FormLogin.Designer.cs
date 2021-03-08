@@ -256,6 +256,7 @@
             this.textBoxLoginUser.Size = new System.Drawing.Size(150, 53);
             this.textBoxLoginUser.TabIndex = 2;
             this.textBoxLoginUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxLoginUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxLoginUser_MouseDown);
             // 
             // textBoxLoginPass
             // 
@@ -270,6 +271,7 @@
             this.textBoxLoginPass.TabIndex = 3;
             this.textBoxLoginPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxLoginPass.UseSystemPasswordChar = true;
+            this.textBoxLoginPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxLoginPass_MouseDown);
             // 
             // buttonLogin
             // 

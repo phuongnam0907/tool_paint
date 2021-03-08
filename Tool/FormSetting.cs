@@ -14,6 +14,7 @@ namespace Tool
     {
         private int permissionUser = 0;
         private bool isTest_tabPageTimeRunAuto = false;
+        Keypad numKey = new Keypad();
 
         public FormSetting()
         {
@@ -34,6 +35,7 @@ namespace Tool
         private void buttonBack_Click(object sender, EventArgs e)
         {
             permissionUser = 0;
+            numKey.Close();
             this.Close();
         }
 
@@ -81,6 +83,18 @@ namespace Tool
                 buttonStopMachine.BackColor = Color.Red;
             }
             isTest_tabPageTimeRunAuto = !isTest_tabPageTimeRunAuto;
+        }
+
+        private void textBoxEncoder_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxEncoder);
+            numKey.Show();
+        }
+
+        private void buttonSetupConnect_Click(object sender, EventArgs e)
+        {
+            FormSettingSerial formSettingSeiral = new FormSettingSerial(permissionUser);
+            formSettingSeiral.Show();
         }
     }
 }

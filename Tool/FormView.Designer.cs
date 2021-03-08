@@ -770,8 +770,10 @@
             // 
             // pictureBoxPower
             // 
-            this.pictureBoxPower.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxPower.BackColor = System.Drawing.Color.LavenderBlush;
+            this.pictureBoxPower.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPower.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxPower.Image = global::Tool.Properties.Resources.power;
             this.pictureBoxPower.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxPower.Name = "pictureBoxPower";
@@ -783,7 +785,9 @@
             // 
             // pictureBoxVietnamese
             // 
-            this.pictureBoxVietnamese.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxVietnamese.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxVietnamese.Image = global::Tool.Properties.Resources.vietnamese;
             this.pictureBoxVietnamese.Location = new System.Drawing.Point(171, 3);
             this.pictureBoxVietnamese.Name = "pictureBoxVietnamese";
@@ -794,12 +798,14 @@
             // 
             // pictureBoxEnglish
             // 
-            this.pictureBoxEnglish.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxEnglish.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxEnglish.Enabled = false;
             this.pictureBoxEnglish.Image = global::Tool.Properties.Resources.english;
-            this.pictureBoxEnglish.Location = new System.Drawing.Point(371, 3);
+            this.pictureBoxEnglish.Location = new System.Drawing.Point(339, 3);
             this.pictureBoxEnglish.Name = "pictureBoxEnglish";
-            this.pictureBoxEnglish.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxEnglish.Size = new System.Drawing.Size(164, 50);
             this.pictureBoxEnglish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxEnglish.TabIndex = 2;
             this.pictureBoxEnglish.TabStop = false;

@@ -100,7 +100,8 @@ namespace Tool
 
         private void pictureBoxPower_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ExitApp exitApp = new ExitApp(this);
+            exitApp.Show();
         }
 
         private void buttonClearCounter_Click(object sender, EventArgs e)

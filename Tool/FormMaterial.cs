@@ -24,6 +24,9 @@ namespace Tool
         public FormMaterial()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
