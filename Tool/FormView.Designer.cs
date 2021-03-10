@@ -631,13 +631,15 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label13.Location = new System.Drawing.Point(62, 480);
+            this.label13.Location = new System.Drawing.Point(3, 456);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 27);
+            this.label13.Size = new System.Drawing.Size(261, 76);
             this.label13.TabIndex = 13;
             this.label13.Text = "ĐIỆN ÁP (V)";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -719,6 +721,7 @@
             this.textBoxCurentNumber.CausesValidation = false;
             this.textBoxCurentNumber.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxCurentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCurentNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBoxCurentNumber.Location = new System.Drawing.Point(270, 323);
             this.textBoxCurentNumber.MaxLength = 7;
             this.textBoxCurentNumber.Name = "textBoxCurentNumber";

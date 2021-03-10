@@ -13,6 +13,7 @@ namespace Tool
     public partial class FormSettingSerial : Form
     {
         private int userPermission = 0;
+        
         public FormSettingSerial(int userLevel)
         {
             InitializeComponent();

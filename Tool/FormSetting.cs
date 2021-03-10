@@ -96,5 +96,185 @@ namespace Tool
             FormSettingSerial formSettingSeiral = new FormSettingSerial(permissionUser);
             formSettingSeiral.Show();
         }
+
+        private void textBoxDKPully_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxDKPully);
+            numKey.Show();
+        }
+
+        private void textBoxCDBuCat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxCDBuCat);
+            numKey.Show();
+        }
+
+        private void textBoxCDBuSai_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxCDBuSai);
+            numKey.Show();
+        }
+
+        private void textBoxDKSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxDKSat);
+            numKey.Show();
+        }
+
+        private void textBoxKeoChamCuoi_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxKeoChamCuoi);
+            numKey.Show();
+        }
+
+        private void textBoxCT_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxCT);
+            numKey.Show();
+        }
+
+        private void textBoxCL_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxCL);
+            numKey.Show();
+        }
+
+        private void textBoxTreCT_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreCT);
+            numKey.Show();
+        }
+
+        private void textBoxTreBL_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreBL);
+            numKey.Show();
+        }
+
+        private void textBoxTreDongTac_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreDongTac);
+            numKey.Show();
+        }
+
+        private void textBoxTreBeToiSensor_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreBeToiSensor);
+            numKey.Show();
+        }
+
+        private void textBoxThoiGianTreKeoCham_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxThoiGianTreKeoCham);
+            numKey.Show();
+        }
+
+        private void textBoxVongLoXo_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxVongLoXo);
+            numKey.Show();
+        }
+
+        private void textBoxThoiGianChayMay_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxThoiGianChayMay);
+            numKey.Show();
+        }
+
+        private void textBoxThoiGianDungMay_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxThoiGianDungMay);
+            numKey.Show();
+        }
+
+        private void textBoxThoiGianBaoHanh_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxThoiGianBaoHanh);
+            numKey.Show();
+        }
+
+        private void textBoxChieuDaiBuCatSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxChieuDaiBuCatSat);
+            numKey.Show();
+        }
+
+        private void textBoxChieuDaiBuCatInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxChieuDaiBuCatInox);
+            numKey.Show();
+        }
+
+        private void textBoxChieuDaiBuSaiSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxChieuDaiBuSaiSat);
+            numKey.Show();
+        }
+
+        private void textBoxChieuDaiBuSaiInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxChieuDaiBuSaiInox);
+            numKey.Show();
+        }
+
+        private void textBoxKeoChamCuoiSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxKeoChamCuoiSat);
+            numKey.Show();
+        }
+
+        private void textBoxKeoChamCuoiInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxKeoChamCuoiInox);
+            numKey.Show();
+        }
+
+        private void textBoxTreCatToiSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreCatToiSat);
+            numKey.Show();
+        }
+
+        private void textBoxTreCatToiInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreCatToiInox);
+            numKey.Show();
+        }
+
+        private void textBoxTreBeLuiSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreBeLuiSat);
+            numKey.Show();
+        }
+
+        private void textBoxTreBeLuiInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreBeLuiInox);
+            numKey.Show();
+        }
+
+        private void textBoxTreDongTacSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreDongTacSat);
+            numKey.Show();
+        }
+
+        private void textBoxTreDongTacInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxTreDongTacInox);
+            numKey.Show();
+        }
+
+        private void textBoxThoiGianTreApSuatSat_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxThoiGianTreApSuatSat);
+            numKey.Show();
+        }
+
+        private void textBoxThoiGianTreApSuatInox_MouseDown(object sender, MouseEventArgs e)
+        {
+            numKey.setTextBox(textBoxThoiGianTreApSuatInox);
+            numKey.Show();
+        }
     }
 }

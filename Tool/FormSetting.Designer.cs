@@ -55,10 +55,10 @@
             this.textBoxCL = new System.Windows.Forms.TextBox();
             this.textBoxTreCT = new System.Windows.Forms.TextBox();
             this.textBoxTreBL = new System.Windows.Forms.TextBox();
+            this.textBoxTreBeToiSensor = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianTreKeoCham = new System.Windows.Forms.TextBox();
+            this.textBoxVongLoXo = new System.Windows.Forms.TextBox();
             this.textBoxTreDongTac = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
             this.tabPageRunManual = new System.Windows.Forms.TabPage();
             this.tabPageTimeRunAuto = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,10 +68,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.buttonStopMachine = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianChayMay = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianDungMay = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianBaoHanh = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianConLai = new System.Windows.Forms.TextBox();
             this.tabPageTestSystem = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label45 = new System.Windows.Forms.Label();
@@ -133,20 +133,20 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label22 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBoxChieuDaiBuCatSat = new System.Windows.Forms.TextBox();
+            this.textBoxKeoChamCuoiSat = new System.Windows.Forms.TextBox();
+            this.textBoxChieuDaiBuSaiSat = new System.Windows.Forms.TextBox();
+            this.textBoxTreCatToiSat = new System.Windows.Forms.TextBox();
+            this.textBoxTreBeLuiSat = new System.Windows.Forms.TextBox();
+            this.textBoxTreDongTacSat = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianTreApSuatSat = new System.Windows.Forms.TextBox();
+            this.textBoxChieuDaiBuCatInox = new System.Windows.Forms.TextBox();
+            this.textBoxChieuDaiBuSaiInox = new System.Windows.Forms.TextBox();
+            this.textBoxKeoChamCuoiInox = new System.Windows.Forms.TextBox();
+            this.textBoxTreCatToiInox = new System.Windows.Forms.TextBox();
+            this.textBoxTreBeLuiInox = new System.Windows.Forms.TextBox();
+            this.textBoxTreDongTacInox = new System.Windows.Forms.TextBox();
+            this.textBoxThoiGianTreApSuatInox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -254,10 +254,10 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxCL, 3, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBoxTreCT, 3, 8);
             this.tableLayoutPanel1.Controls.Add(this.textBoxTreBL, 3, 9);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTreBeToiSensor, 3, 11);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxThoiGianTreKeoCham, 3, 12);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxVongLoXo, 3, 13);
             this.tableLayoutPanel1.Controls.Add(this.textBoxTreDongTac, 3, 10);
-            this.tableLayoutPanel1.Controls.Add(this.textBox17, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.textBox12, 3, 12);
-            this.tableLayoutPanel1.Controls.Add(this.textBox18, 3, 13);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 14;
@@ -275,7 +275,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(638, 1168);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(604, 1168);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -284,7 +284,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(83, 28);
+            this.label1.Location = new System.Drawing.Point(73, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 27);
             this.label1.TabIndex = 0;
@@ -297,9 +297,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(68, 97);
+            this.label2.Location = new System.Drawing.Point(98, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 54);
+            this.label2.Size = new System.Drawing.Size(164, 54);
             this.label2.TabIndex = 1;
             this.label2.Text = "ĐƯỜNG KÍNH PULLY ( MM )";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -310,9 +310,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(72, 180);
+            this.label3.Location = new System.Drawing.Point(69, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 54);
+            this.label3.Size = new System.Drawing.Size(223, 54);
             this.label3.TabIndex = 2;
             this.label3.Text = "CHIỀU DÀI BÙ CẮT ( MM )";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,7 +323,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(77, 263);
+            this.label4.Location = new System.Drawing.Point(67, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(227, 54);
             this.label4.TabIndex = 3;
@@ -336,7 +336,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(77, 346);
+            this.label5.Location = new System.Drawing.Point(67, 346);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(227, 54);
             this.label5.TabIndex = 4;
@@ -349,7 +349,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(83, 429);
+            this.label6.Location = new System.Drawing.Point(73, 429);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 54);
             this.label6.TabIndex = 5;
@@ -362,7 +362,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(106, 526);
+            this.label7.Location = new System.Drawing.Point(96, 526);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(168, 27);
             this.label7.TabIndex = 6;
@@ -375,7 +375,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(106, 609);
+            this.label8.Location = new System.Drawing.Point(96, 609);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(168, 27);
             this.label8.TabIndex = 7;
@@ -388,7 +388,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(81, 692);
+            this.label9.Location = new System.Drawing.Point(71, 692);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(219, 27);
             this.label9.TabIndex = 8;
@@ -401,7 +401,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(89, 775);
+            this.label10.Location = new System.Drawing.Point(79, 775);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(203, 27);
             this.label10.TabIndex = 9;
@@ -414,7 +414,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(112, 1110);
+            this.label19.Location = new System.Drawing.Point(102, 1110);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(157, 27);
             this.label19.TabIndex = 18;
@@ -427,9 +427,9 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(71, 1010);
+            this.label15.Location = new System.Drawing.Point(79, 1010);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(239, 54);
+            this.label15.Size = new System.Drawing.Size(202, 54);
             this.label15.TabIndex = 14;
             this.label15.Text = "THỜI GIAN TRỄ KÉO CHẬM ( mS )";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -440,7 +440,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(110, 927);
+            this.label11.Location = new System.Drawing.Point(100, 927);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(161, 54);
             this.label11.TabIndex = 10;
@@ -453,9 +453,9 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(66, 858);
+            this.label14.Location = new System.Drawing.Point(63, 844);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(248, 27);
+            this.label14.Size = new System.Drawing.Size(234, 54);
             this.label14.TabIndex = 13;
             this.label14.Text = "TRỄ ĐỘNG TÁC ( mS )";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -464,7 +464,7 @@
             // 
             this.textBoxEncoder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxEncoder.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEncoder.Location = new System.Drawing.Point(361, 15);
+            this.textBoxEncoder.Location = new System.Drawing.Point(339, 15);
             this.textBoxEncoder.MaxLength = 5;
             this.textBoxEncoder.Name = "textBoxEncoder";
             this.textBoxEncoder.Size = new System.Drawing.Size(134, 53);
@@ -476,144 +476,157 @@
             // 
             this.textBoxDKPully.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDKPully.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDKPully.Location = new System.Drawing.Point(361, 98);
+            this.textBoxDKPully.Location = new System.Drawing.Point(339, 98);
             this.textBoxDKPully.MaxLength = 5;
             this.textBoxDKPully.Name = "textBoxDKPully";
             this.textBoxDKPully.Size = new System.Drawing.Size(134, 53);
             this.textBoxDKPully.TabIndex = 22;
             this.textBoxDKPully.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDKPully.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxDKPully_MouseDown);
             // 
             // textBoxCDBuCat
             // 
             this.textBoxCDBuCat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCDBuCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCDBuCat.Location = new System.Drawing.Point(361, 181);
+            this.textBoxCDBuCat.Location = new System.Drawing.Point(339, 181);
             this.textBoxCDBuCat.MaxLength = 5;
             this.textBoxCDBuCat.Name = "textBoxCDBuCat";
             this.textBoxCDBuCat.Size = new System.Drawing.Size(134, 53);
             this.textBoxCDBuCat.TabIndex = 23;
             this.textBoxCDBuCat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCDBuCat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxCDBuCat_MouseDown);
             // 
             // textBoxCDBuSai
             // 
             this.textBoxCDBuSai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCDBuSai.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCDBuSai.Location = new System.Drawing.Point(361, 264);
+            this.textBoxCDBuSai.Location = new System.Drawing.Point(339, 264);
             this.textBoxCDBuSai.MaxLength = 5;
             this.textBoxCDBuSai.Name = "textBoxCDBuSai";
             this.textBoxCDBuSai.Size = new System.Drawing.Size(134, 53);
             this.textBoxCDBuSai.TabIndex = 24;
             this.textBoxCDBuSai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCDBuSai.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxCDBuSai_MouseDown);
             // 
             // textBoxDKSat
             // 
             this.textBoxDKSat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDKSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDKSat.Location = new System.Drawing.Point(361, 347);
+            this.textBoxDKSat.Location = new System.Drawing.Point(339, 347);
             this.textBoxDKSat.MaxLength = 5;
             this.textBoxDKSat.Name = "textBoxDKSat";
             this.textBoxDKSat.Size = new System.Drawing.Size(134, 53);
             this.textBoxDKSat.TabIndex = 25;
             this.textBoxDKSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDKSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxDKSat_MouseDown);
             // 
             // textBoxKeoChamCuoi
             // 
             this.textBoxKeoChamCuoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxKeoChamCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKeoChamCuoi.Location = new System.Drawing.Point(361, 430);
+            this.textBoxKeoChamCuoi.Location = new System.Drawing.Point(339, 430);
             this.textBoxKeoChamCuoi.MaxLength = 5;
             this.textBoxKeoChamCuoi.Name = "textBoxKeoChamCuoi";
             this.textBoxKeoChamCuoi.Size = new System.Drawing.Size(134, 53);
             this.textBoxKeoChamCuoi.TabIndex = 26;
             this.textBoxKeoChamCuoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxKeoChamCuoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxKeoChamCuoi_MouseDown);
             // 
             // textBoxCT
             // 
             this.textBoxCT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCT.Location = new System.Drawing.Point(361, 513);
+            this.textBoxCT.Location = new System.Drawing.Point(339, 513);
             this.textBoxCT.MaxLength = 5;
             this.textBoxCT.Name = "textBoxCT";
             this.textBoxCT.Size = new System.Drawing.Size(134, 53);
             this.textBoxCT.TabIndex = 27;
             this.textBoxCT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxCT_MouseDown);
             // 
             // textBoxCL
             // 
             this.textBoxCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCL.Location = new System.Drawing.Point(361, 596);
+            this.textBoxCL.Location = new System.Drawing.Point(339, 596);
             this.textBoxCL.MaxLength = 5;
             this.textBoxCL.Name = "textBoxCL";
             this.textBoxCL.Size = new System.Drawing.Size(134, 53);
             this.textBoxCL.TabIndex = 28;
             this.textBoxCL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxCL_MouseDown);
             // 
             // textBoxTreCT
             // 
             this.textBoxTreCT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTreCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreCT.Location = new System.Drawing.Point(361, 679);
+            this.textBoxTreCT.Location = new System.Drawing.Point(339, 679);
             this.textBoxTreCT.MaxLength = 5;
             this.textBoxTreCT.Name = "textBoxTreCT";
             this.textBoxTreCT.Size = new System.Drawing.Size(134, 53);
             this.textBoxTreCT.TabIndex = 29;
             this.textBoxTreCT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreCT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreCT_MouseDown);
             // 
             // textBoxTreBL
             // 
             this.textBoxTreBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTreBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreBL.Location = new System.Drawing.Point(361, 762);
+            this.textBoxTreBL.Location = new System.Drawing.Point(339, 762);
             this.textBoxTreBL.MaxLength = 5;
             this.textBoxTreBL.Name = "textBoxTreBL";
             this.textBoxTreBL.Size = new System.Drawing.Size(134, 53);
             this.textBoxTreBL.TabIndex = 30;
             this.textBoxTreBL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreBL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreBL_MouseDown);
+            // 
+            // textBoxTreBeToiSensor
+            // 
+            this.textBoxTreBeToiSensor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreBeToiSensor.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreBeToiSensor.Location = new System.Drawing.Point(339, 928);
+            this.textBoxTreBeToiSensor.MaxLength = 5;
+            this.textBoxTreBeToiSensor.Name = "textBoxTreBeToiSensor";
+            this.textBoxTreBeToiSensor.Size = new System.Drawing.Size(134, 53);
+            this.textBoxTreBeToiSensor.TabIndex = 34;
+            this.textBoxTreBeToiSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreBeToiSensor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreBeToiSensor_MouseDown);
+            // 
+            // textBoxThoiGianTreKeoCham
+            // 
+            this.textBoxThoiGianTreKeoCham.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianTreKeoCham.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianTreKeoCham.Location = new System.Drawing.Point(339, 1011);
+            this.textBoxThoiGianTreKeoCham.MaxLength = 5;
+            this.textBoxThoiGianTreKeoCham.Name = "textBoxThoiGianTreKeoCham";
+            this.textBoxThoiGianTreKeoCham.Size = new System.Drawing.Size(134, 53);
+            this.textBoxThoiGianTreKeoCham.TabIndex = 35;
+            this.textBoxThoiGianTreKeoCham.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianTreKeoCham.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianTreKeoCham_MouseDown);
+            // 
+            // textBoxVongLoXo
+            // 
+            this.textBoxVongLoXo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxVongLoXo.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxVongLoXo.Location = new System.Drawing.Point(339, 1097);
+            this.textBoxVongLoXo.MaxLength = 5;
+            this.textBoxVongLoXo.Name = "textBoxVongLoXo";
+            this.textBoxVongLoXo.Size = new System.Drawing.Size(134, 53);
+            this.textBoxVongLoXo.TabIndex = 36;
+            this.textBoxVongLoXo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxVongLoXo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxVongLoXo_MouseDown);
             // 
             // textBoxTreDongTac
             // 
             this.textBoxTreDongTac.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTreDongTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreDongTac.Location = new System.Drawing.Point(361, 845);
+            this.textBoxTreDongTac.Location = new System.Drawing.Point(339, 845);
             this.textBoxTreDongTac.MaxLength = 5;
             this.textBoxTreDongTac.Name = "textBoxTreDongTac";
             this.textBoxTreDongTac.Size = new System.Drawing.Size(134, 53);
             this.textBoxTreDongTac.TabIndex = 31;
             this.textBoxTreDongTac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(361, 928);
-            this.textBox17.MaxLength = 5;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(134, 53);
-            this.textBox17.TabIndex = 34;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(361, 1011);
-            this.textBox12.MaxLength = 5;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(134, 53);
-            this.textBox12.TabIndex = 35;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(361, 1097);
-            this.textBox18.MaxLength = 5;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(134, 53);
-            this.textBox18.TabIndex = 36;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreDongTac.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreDongTac_MouseDown);
             // 
             // tabPageRunManual
             // 
@@ -651,10 +664,10 @@
             this.tableLayoutPanel4.Controls.Add(this.label17, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.label18, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.buttonStopMachine, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.textBox8, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox9, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox14, 2, 3);
-            this.tableLayoutPanel4.Controls.Add(this.textBox15, 2, 4);
+            this.tableLayoutPanel4.Controls.Add(this.textBoxThoiGianChayMay, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textBoxThoiGianDungMay, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.textBoxThoiGianBaoHanh, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.textBoxThoiGianConLai, 2, 4);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
@@ -744,49 +757,54 @@
             this.buttonStopMachine.UseVisualStyleBackColor = false;
             this.buttonStopMachine.Click += new System.EventHandler(this.buttonStopMachine_Click);
             // 
-            // textBox8
+            // textBoxThoiGianChayMay
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(435, 35);
-            this.textBox8.MaxLength = 5;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(134, 53);
-            this.textBox8.TabIndex = 22;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianChayMay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianChayMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianChayMay.Location = new System.Drawing.Point(435, 35);
+            this.textBoxThoiGianChayMay.MaxLength = 5;
+            this.textBoxThoiGianChayMay.Name = "textBoxThoiGianChayMay";
+            this.textBoxThoiGianChayMay.Size = new System.Drawing.Size(134, 53);
+            this.textBoxThoiGianChayMay.TabIndex = 22;
+            this.textBoxThoiGianChayMay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianChayMay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianChayMay_MouseDown);
             // 
-            // textBox9
+            // textBoxThoiGianDungMay
             // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(435, 159);
-            this.textBox9.MaxLength = 5;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(134, 53);
-            this.textBox9.TabIndex = 23;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianDungMay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianDungMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianDungMay.Location = new System.Drawing.Point(435, 159);
+            this.textBoxThoiGianDungMay.MaxLength = 5;
+            this.textBoxThoiGianDungMay.Name = "textBoxThoiGianDungMay";
+            this.textBoxThoiGianDungMay.Size = new System.Drawing.Size(134, 53);
+            this.textBoxThoiGianDungMay.TabIndex = 23;
+            this.textBoxThoiGianDungMay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianDungMay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianDungMay_MouseDown);
             // 
-            // textBox14
+            // textBoxThoiGianBaoHanh
             // 
-            this.textBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(435, 407);
-            this.textBox14.MaxLength = 5;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(134, 53);
-            this.textBox14.TabIndex = 24;
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianBaoHanh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianBaoHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianBaoHanh.Location = new System.Drawing.Point(435, 407);
+            this.textBoxThoiGianBaoHanh.MaxLength = 5;
+            this.textBoxThoiGianBaoHanh.Name = "textBoxThoiGianBaoHanh";
+            this.textBoxThoiGianBaoHanh.Size = new System.Drawing.Size(134, 53);
+            this.textBoxThoiGianBaoHanh.TabIndex = 24;
+            this.textBoxThoiGianBaoHanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianBaoHanh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianBaoHanh_MouseDown);
             // 
-            // textBox15
+            // textBoxThoiGianConLai
             // 
-            this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(435, 533);
-            this.textBox15.MaxLength = 5;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(134, 53);
-            this.textBox15.TabIndex = 25;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianConLai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianConLai.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBoxThoiGianConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianConLai.Location = new System.Drawing.Point(435, 533);
+            this.textBoxThoiGianConLai.MaxLength = 5;
+            this.textBoxThoiGianConLai.Name = "textBoxThoiGianConLai";
+            this.textBoxThoiGianConLai.ReadOnly = true;
+            this.textBoxThoiGianConLai.Size = new System.Drawing.Size(134, 53);
+            this.textBoxThoiGianConLai.TabIndex = 25;
+            this.textBoxThoiGianConLai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tabPageTestSystem
             // 
@@ -1136,6 +1154,7 @@
             // textBox16
             // 
             this.textBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox16.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.Location = new System.Drawing.Point(427, 59);
             this.textBox16.MaxLength = 5;
@@ -1149,6 +1168,7 @@
             // textBox19
             // 
             this.textBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox19.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox19.Location = new System.Drawing.Point(427, 171);
             this.textBox19.MaxLength = 5;
@@ -1574,20 +1594,19 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.Controls.Add(this.label22, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label32, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 2, 4);
-            this.tableLayoutPanel3.Controls.Add(this.textBox5, 2, 5);
-            this.tableLayoutPanel3.Controls.Add(this.textBox6, 2, 6);
-            this.tableLayoutPanel3.Controls.Add(this.textBox7, 2, 7);
-            this.tableLayoutPanel3.Controls.Add(this.textBox10, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox11, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox13, 3, 3);
-            this.tableLayoutPanel3.Controls.Add(this.textBox21, 3, 4);
-            this.tableLayoutPanel3.Controls.Add(this.textBox22, 3, 5);
-            this.tableLayoutPanel3.Controls.Add(this.textBox23, 3, 6);
-            this.tableLayoutPanel3.Controls.Add(this.textBox24, 3, 7);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxChieuDaiBuCatSat, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxKeoChamCuoiSat, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxChieuDaiBuSaiSat, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxTreCatToiSat, 2, 4);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxTreBeLuiSat, 2, 5);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxTreDongTacSat, 2, 6);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxThoiGianTreApSuatSat, 2, 7);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxChieuDaiBuCatInox, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxChieuDaiBuSaiInox, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxTreCatToiInox, 3, 4);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxTreBeLuiInox, 3, 5);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxTreDongTacInox, 3, 6);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxThoiGianTreApSuatInox, 3, 7);
             this.tableLayoutPanel3.Controls.Add(this.label25, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label23, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.label24, 1, 3);
@@ -1596,6 +1615,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label28, 1, 6);
             this.tableLayoutPanel3.Controls.Add(this.label29, 1, 7);
             this.tableLayoutPanel3.Controls.Add(this.button1, 2, 9);
+            this.tableLayoutPanel3.Controls.Add(this.textBoxKeoChamCuoiInox, 3, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 10;
@@ -1638,159 +1658,173 @@
             this.label32.Text = "INOX";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBoxChieuDaiBuCatSat
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(322, 66);
-            this.textBox1.MaxLength = 5;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 53);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuCatSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxChieuDaiBuCatSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxChieuDaiBuCatSat.Location = new System.Drawing.Point(322, 66);
+            this.textBoxChieuDaiBuCatSat.MaxLength = 5;
+            this.textBoxChieuDaiBuCatSat.Name = "textBoxChieuDaiBuCatSat";
+            this.textBoxChieuDaiBuCatSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxChieuDaiBuCatSat.TabIndex = 22;
+            this.textBoxChieuDaiBuCatSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuCatSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxChieuDaiBuCatSat_MouseDown);
             // 
-            // textBox3
+            // textBoxKeoChamCuoiSat
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(322, 190);
-            this.textBox3.MaxLength = 5;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 53);
-            this.textBox3.TabIndex = 24;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxKeoChamCuoiSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxKeoChamCuoiSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKeoChamCuoiSat.Location = new System.Drawing.Point(322, 190);
+            this.textBoxKeoChamCuoiSat.MaxLength = 5;
+            this.textBoxKeoChamCuoiSat.Name = "textBoxKeoChamCuoiSat";
+            this.textBoxKeoChamCuoiSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxKeoChamCuoiSat.TabIndex = 24;
+            this.textBoxKeoChamCuoiSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxKeoChamCuoiSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxKeoChamCuoiSat_MouseDown);
             // 
-            // textBox2
+            // textBoxChieuDaiBuSaiSat
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(322, 128);
-            this.textBox2.MaxLength = 5;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 53);
-            this.textBox2.TabIndex = 23;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuSaiSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxChieuDaiBuSaiSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxChieuDaiBuSaiSat.Location = new System.Drawing.Point(322, 128);
+            this.textBoxChieuDaiBuSaiSat.MaxLength = 5;
+            this.textBoxChieuDaiBuSaiSat.Name = "textBoxChieuDaiBuSaiSat";
+            this.textBoxChieuDaiBuSaiSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxChieuDaiBuSaiSat.TabIndex = 23;
+            this.textBoxChieuDaiBuSaiSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuSaiSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxChieuDaiBuSaiSat_MouseDown);
             // 
-            // textBox4
+            // textBoxTreCatToiSat
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(322, 252);
-            this.textBox4.MaxLength = 5;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 53);
-            this.textBox4.TabIndex = 25;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreCatToiSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreCatToiSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreCatToiSat.Location = new System.Drawing.Point(322, 252);
+            this.textBoxTreCatToiSat.MaxLength = 5;
+            this.textBoxTreCatToiSat.Name = "textBoxTreCatToiSat";
+            this.textBoxTreCatToiSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxTreCatToiSat.TabIndex = 25;
+            this.textBoxTreCatToiSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreCatToiSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreCatToiSat_MouseDown);
             // 
-            // textBox5
+            // textBoxTreBeLuiSat
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(322, 314);
-            this.textBox5.MaxLength = 5;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 53);
-            this.textBox5.TabIndex = 26;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreBeLuiSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreBeLuiSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreBeLuiSat.Location = new System.Drawing.Point(322, 314);
+            this.textBoxTreBeLuiSat.MaxLength = 5;
+            this.textBoxTreBeLuiSat.Name = "textBoxTreBeLuiSat";
+            this.textBoxTreBeLuiSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxTreBeLuiSat.TabIndex = 26;
+            this.textBoxTreBeLuiSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreBeLuiSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreBeLuiSat_MouseDown);
             // 
-            // textBox6
+            // textBoxTreDongTacSat
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(322, 376);
-            this.textBox6.MaxLength = 5;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(131, 53);
-            this.textBox6.TabIndex = 27;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreDongTacSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreDongTacSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreDongTacSat.Location = new System.Drawing.Point(322, 376);
+            this.textBoxTreDongTacSat.MaxLength = 5;
+            this.textBoxTreDongTacSat.Name = "textBoxTreDongTacSat";
+            this.textBoxTreDongTacSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxTreDongTacSat.TabIndex = 27;
+            this.textBoxTreDongTacSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreDongTacSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreDongTacSat_MouseDown);
             // 
-            // textBox7
+            // textBoxThoiGianTreApSuatSat
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(322, 438);
-            this.textBox7.MaxLength = 5;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(131, 53);
-            this.textBox7.TabIndex = 28;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianTreApSuatSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianTreApSuatSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianTreApSuatSat.Location = new System.Drawing.Point(322, 438);
+            this.textBoxThoiGianTreApSuatSat.MaxLength = 5;
+            this.textBoxThoiGianTreApSuatSat.Name = "textBoxThoiGianTreApSuatSat";
+            this.textBoxThoiGianTreApSuatSat.Size = new System.Drawing.Size(131, 53);
+            this.textBoxThoiGianTreApSuatSat.TabIndex = 28;
+            this.textBoxThoiGianTreApSuatSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianTreApSuatSat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianTreApSuatSat_MouseDown);
             // 
-            // textBox10
+            // textBoxChieuDaiBuCatInox
             // 
-            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(477, 66);
-            this.textBox10.MaxLength = 5;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(131, 53);
-            this.textBox10.TabIndex = 31;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuCatInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxChieuDaiBuCatInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxChieuDaiBuCatInox.Location = new System.Drawing.Point(477, 66);
+            this.textBoxChieuDaiBuCatInox.MaxLength = 5;
+            this.textBoxChieuDaiBuCatInox.Name = "textBoxChieuDaiBuCatInox";
+            this.textBoxChieuDaiBuCatInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxChieuDaiBuCatInox.TabIndex = 31;
+            this.textBoxChieuDaiBuCatInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuCatInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxChieuDaiBuCatInox_MouseDown);
             // 
-            // textBox11
+            // textBoxChieuDaiBuSaiInox
             // 
-            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(477, 128);
-            this.textBox11.MaxLength = 5;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(131, 53);
-            this.textBox11.TabIndex = 32;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuSaiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxChieuDaiBuSaiInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxChieuDaiBuSaiInox.Location = new System.Drawing.Point(477, 128);
+            this.textBoxChieuDaiBuSaiInox.MaxLength = 5;
+            this.textBoxChieuDaiBuSaiInox.Name = "textBoxChieuDaiBuSaiInox";
+            this.textBoxChieuDaiBuSaiInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxChieuDaiBuSaiInox.TabIndex = 32;
+            this.textBoxChieuDaiBuSaiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChieuDaiBuSaiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxChieuDaiBuSaiInox_MouseDown);
             // 
-            // textBox13
+            // textBoxKeoChamCuoiInox
             // 
-            this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(477, 190);
-            this.textBox13.MaxLength = 5;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(131, 53);
-            this.textBox13.TabIndex = 33;
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxKeoChamCuoiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxKeoChamCuoiInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKeoChamCuoiInox.Location = new System.Drawing.Point(477, 190);
+            this.textBoxKeoChamCuoiInox.MaxLength = 5;
+            this.textBoxKeoChamCuoiInox.Name = "textBoxKeoChamCuoiInox";
+            this.textBoxKeoChamCuoiInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxKeoChamCuoiInox.TabIndex = 33;
+            this.textBoxKeoChamCuoiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxKeoChamCuoiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxKeoChamCuoiInox_MouseDown);
             // 
-            // textBox21
+            // textBoxTreCatToiInox
             // 
-            this.textBox21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(477, 252);
-            this.textBox21.MaxLength = 5;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(131, 53);
-            this.textBox21.TabIndex = 34;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreCatToiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreCatToiInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreCatToiInox.Location = new System.Drawing.Point(477, 252);
+            this.textBoxTreCatToiInox.MaxLength = 5;
+            this.textBoxTreCatToiInox.Name = "textBoxTreCatToiInox";
+            this.textBoxTreCatToiInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxTreCatToiInox.TabIndex = 34;
+            this.textBoxTreCatToiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreCatToiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreCatToiInox_MouseDown);
             // 
-            // textBox22
+            // textBoxTreBeLuiInox
             // 
-            this.textBox22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(477, 314);
-            this.textBox22.MaxLength = 5;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(131, 53);
-            this.textBox22.TabIndex = 35;
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreBeLuiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreBeLuiInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreBeLuiInox.Location = new System.Drawing.Point(477, 314);
+            this.textBoxTreBeLuiInox.MaxLength = 5;
+            this.textBoxTreBeLuiInox.Name = "textBoxTreBeLuiInox";
+            this.textBoxTreBeLuiInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxTreBeLuiInox.TabIndex = 35;
+            this.textBoxTreBeLuiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreBeLuiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreBeLuiInox_MouseDown);
             // 
-            // textBox23
+            // textBoxTreDongTacInox
             // 
-            this.textBox23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(477, 376);
-            this.textBox23.MaxLength = 5;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(131, 53);
-            this.textBox23.TabIndex = 36;
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreDongTacInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreDongTacInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreDongTacInox.Location = new System.Drawing.Point(477, 376);
+            this.textBoxTreDongTacInox.MaxLength = 5;
+            this.textBoxTreDongTacInox.Name = "textBoxTreDongTacInox";
+            this.textBoxTreDongTacInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxTreDongTacInox.TabIndex = 36;
+            this.textBoxTreDongTacInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreDongTacInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreDongTacInox_MouseDown);
             // 
-            // textBox24
+            // textBoxThoiGianTreApSuatInox
             // 
-            this.textBox24.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(477, 438);
-            this.textBox24.MaxLength = 5;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(131, 53);
-            this.textBox24.TabIndex = 37;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianTreApSuatInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianTreApSuatInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxThoiGianTreApSuatInox.Location = new System.Drawing.Point(477, 438);
+            this.textBoxThoiGianTreApSuatInox.MaxLength = 5;
+            this.textBoxThoiGianTreApSuatInox.Name = "textBoxThoiGianTreApSuatInox";
+            this.textBoxThoiGianTreApSuatInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxThoiGianTreApSuatInox.TabIndex = 37;
+            this.textBoxThoiGianTreApSuatInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxThoiGianTreApSuatInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianTreApSuatInox_MouseDown);
             // 
             // label25
             // 
@@ -2065,30 +2099,30 @@
         private System.Windows.Forms.TextBox textBoxDKSat;
         private System.Windows.Forms.TextBox textBoxKeoChamCuoi;
         private System.Windows.Forms.TextBox textBoxCT;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBoxThoiGianTreKeoCham;
         private System.Windows.Forms.TextBox textBoxTreDongTac;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBoxTreBeToiSensor;
+        private System.Windows.Forms.TextBox textBoxVongLoXo;
         private System.Windows.Forms.Label labelStatusUser;
         private System.Windows.Forms.Button buttonSaveSettings;
         private System.Windows.Forms.TabPage tabPageMaterialSetup;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBoxChieuDaiBuCatSat;
+        private System.Windows.Forms.TextBox textBoxKeoChamCuoiSat;
+        private System.Windows.Forms.TextBox textBoxChieuDaiBuSaiSat;
+        private System.Windows.Forms.TextBox textBoxTreCatToiSat;
+        private System.Windows.Forms.TextBox textBoxTreBeLuiSat;
+        private System.Windows.Forms.TextBox textBoxTreDongTacSat;
+        private System.Windows.Forms.TextBox textBoxThoiGianTreApSuatSat;
+        private System.Windows.Forms.TextBox textBoxChieuDaiBuCatInox;
+        private System.Windows.Forms.TextBox textBoxChieuDaiBuSaiInox;
+        private System.Windows.Forms.TextBox textBoxKeoChamCuoiInox;
+        private System.Windows.Forms.TextBox textBoxTreCatToiInox;
+        private System.Windows.Forms.TextBox textBoxTreBeLuiInox;
+        private System.Windows.Forms.TextBox textBoxTreDongTacInox;
+        private System.Windows.Forms.TextBox textBoxThoiGianTreApSuatInox;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
@@ -2104,10 +2138,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button buttonStopMachine;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBoxThoiGianChayMay;
+        private System.Windows.Forms.TextBox textBoxThoiGianDungMay;
+        private System.Windows.Forms.TextBox textBoxThoiGianBaoHanh;
+        private System.Windows.Forms.TextBox textBoxThoiGianConLai;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;

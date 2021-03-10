@@ -56,3 +56,5 @@ C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\ob
 C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Keypad.resources
 C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.ExitApp.resources
 C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSettingSerial.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.ExitApp.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSettingSerial.resources
