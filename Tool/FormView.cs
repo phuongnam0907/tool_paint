@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace Tool
 {
@@ -27,6 +28,7 @@ namespace Tool
 
         public FormView()
         {
+            RegisterInStartup(true);
             InitializeComponent();
 
             // Mini version
@@ -191,6 +193,41 @@ namespace Tool
             panel.RowCount--;
         }
 
+        //public static void RemoveArbitraryColumn(TableLayoutPanel panel, int columnIndex)
+        //{
+        //    if (columnIndex >= panel.ColumnCount)
+        //    {
+        //        return;
+        //    }
+
+        //    // delete all controls of row that we want to delete
+        //    for (int i = 0; i < panel.ColumnCount; i++)
+        //    {
+        //        var control = panel.GetControlFromPosition(i, columnIndex);
+        //        panel.Controls.Remove(control);
+        //    }
+
+        //    // move up row controls that comes after row we want to remove
+        //    for (int i = columnIndex + 1; i < panel.RowCount; i++)
+        //    {
+        //        for (int j = 0; j < panel.ColumnCount; j++)
+        //        {
+        //            var control = panel.GetControlFromPosition(j, i);
+        //            if (control != null)
+        //            {
+        //                panel.SetRow(control, i - 1);
+        //            }
+        //        }
+        //    }
+
+        //    var removeStyle = panel.RowCount - 1;
+
+        //    if (panel.RowStyles.Count > removeStyle)
+        //        panel.RowStyles.RemoveAt(removeStyle);
+
+        //    panel.RowCount--;
+        //}
+
         private void textBoxG1_MouseDown(object sender, MouseEventArgs e)
         {
             numKey.setTextBox(textBoxG1);
@@ -261,6 +298,20 @@ namespace Tool
         {
             numKey.setTextBox(textBoxL7);
             numKey.Show();
+        }
+
+        private void RegisterInStartup(bool isChecked)
+        {
+            RegistryKey registryKey = Registry.CurrentUser.OpenSubKey
+                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            if (isChecked)
+            {
+                registryKey.SetValue("Lotus Machine App", Application.ExecutablePath);
+            }
+            else
+            {
+                registryKey.DeleteValue("Lotus Machine App");
+            }
         }
     }
 }

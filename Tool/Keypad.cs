@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Tool
 {
+
     public partial class Keypad : Form
     {
         private bool isDragging = false;
@@ -21,6 +22,15 @@ namespace Tool
         public Keypad()
         {
             InitializeComponent();
+
+            // Disable virtual keyboard
+            System.Diagnostics.Process[] myProcesses = System.Diagnostics.Process.GetProcesses();
+
+            foreach (System.Diagnostics.Process myProcess in myProcesses)
+            {
+                if ("TabTip" == myProcess.ProcessName)
+                    myProcess.Kill();
+            }
         }
 
         public void setTextBox(TextBox tb)

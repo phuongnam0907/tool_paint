@@ -1,0 +1,17 @@
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Release\Tool.exe.config
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Release\Tool.exe
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Release\Tool.pdb
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.ExitApp.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormLogin.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormMaterial.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormPaint.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormSelect.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormSetting.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormSettingSerial.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.FormView.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.Keypad.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.Properties.Resources.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.csproj.GenerateResource.Cache
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.exe
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.pdb
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Release\Tool.csprojResolveAssemblyReference.cache

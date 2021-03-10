@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,12 @@ namespace Tool
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.formView.Close();
+            //this.formView.Close();
+            Process.Start(new ProcessStartInfo("shutdown", "/s /f /t 0")
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false
+            });
         }
     }
 }
