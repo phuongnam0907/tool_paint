@@ -73,39 +73,51 @@ namespace Tool.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("115200")]
         public string BAUDRATE {
             get {
                 return ((string)(this["BAUDRATE"]));
             }
+            set {
+                this["BAUDRATE"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("One")]
         public string STOPBITS {
             get {
                 return ((string)(this["STOPBITS"]));
             }
+            set {
+                this["STOPBITS"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8")]
         public string DATABITS {
             get {
                 return ((string)(this["DATABITS"]));
             }
+            set {
+                this["DATABITS"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("None")]
         public string PARITY {
             get {
                 return ((string)(this["PARITY"]));
+            }
+            set {
+                this["PARITY"] = value;
             }
         }
         
@@ -142,6 +154,18 @@ namespace Tool.Properties {
         public bool RTS {
             get {
                 return ((bool)(this["RTS"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("COM?")]
+        public string COMPORT {
+            get {
+                return ((string)(this["COMPORT"]));
+            }
+            set {
+                this["COMPORT"] = value;
             }
         }
     }
