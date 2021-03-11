@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace Tool
 {
@@ -20,27 +22,42 @@ namespace Tool
             INOX
         }
 
+        private SqlConnection sqlConnection;
         private MATERIAL whichMaterial = MATERIAL.INOX;
         private bool isRunAuto = false;
         private bool isRunManual = false;
         private bool isKeypadShown = false;
         Keypad numKey = new Keypad();
+        private string dataViewConnectString;
 
         public FormView()
         {
+#if DEBUG
+            RegisterInStartup(false);
+#else
             RegisterInStartup(true);
+#endif
             InitializeComponent();
 
-            // Mini version
-            buttonDraw.Visible = false;
-            pictureBoxEnglish.Visible = false;
-            RemoveArbitraryRow(tableLayoutPanel1, 2);
+            if(string.Equals(DEFINITION_VARIABLE.BUILD_TYPE,DEFINITION_VARIABLE.BUILD_TYPE_CUSTOMIZE))
+            {
+                // Mini version
+                buttonDraw.Visible = false;
+                pictureBoxVietnamese.Visible = false;
+                pictureBoxEnglish.Visible = false;
+                RemoveArbitraryRow(tableLayoutPanel1, 2);
+                RemoveArbitraryColumn(tableLayoutPanel4, 1);
+                RemoveArbitraryColumn(tableLayoutPanel4, 2);
+            }
+           
 
             //this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
             pictureBoxShow.Paint += pictureBoxShow_Paint;
+
+            dataViewConnectString = ConfigurationManager.ConnectionStrings["Tool.Properties.Settings.DataGocCanhConnectionString"].ConnectionString;
 
             Invalidate();
 
@@ -193,40 +210,40 @@ namespace Tool
             panel.RowCount--;
         }
 
-        //public static void RemoveArbitraryColumn(TableLayoutPanel panel, int columnIndex)
-        //{
-        //    if (columnIndex >= panel.ColumnCount)
-        //    {
-        //        return;
-        //    }
+        public static void RemoveArbitraryColumn(TableLayoutPanel panel, int columnIndex)
+        {
+            if (columnIndex >= panel.ColumnCount)
+            {
+                return;
+            }
 
-        //    // delete all controls of row that we want to delete
-        //    for (int i = 0; i < panel.ColumnCount; i++)
-        //    {
-        //        var control = panel.GetControlFromPosition(i, columnIndex);
-        //        panel.Controls.Remove(control);
-        //    }
+            // delete all controls of row that we want to delete
+            for (int i = 0; i < panel.RowCount; i++)
+            {
+                var control = panel.GetControlFromPosition(i, columnIndex);
+                panel.Controls.Remove(control);
+            }
 
-        //    // move up row controls that comes after row we want to remove
-        //    for (int i = columnIndex + 1; i < panel.RowCount; i++)
-        //    {
-        //        for (int j = 0; j < panel.ColumnCount; j++)
-        //        {
-        //            var control = panel.GetControlFromPosition(j, i);
-        //            if (control != null)
-        //            {
-        //                panel.SetRow(control, i - 1);
-        //            }
-        //        }
-        //    }
+            // move up row controls that comes after row we want to remove
+            for (int i = columnIndex + 1; i < panel.ColumnCount; i++)
+            {
+                for (int j = 0; j < panel.RowCount; j++)
+                {
+                    var control = panel.GetControlFromPosition(j, i);
+                    if (control != null)
+                    {
+                        panel.SetColumn(control, i - 1);
+                    }
+                }
+            }
 
-        //    var removeStyle = panel.RowCount - 1;
+            var removeStyle = panel.ColumnCount - 1;
 
-        //    if (panel.RowStyles.Count > removeStyle)
-        //        panel.RowStyles.RemoveAt(removeStyle);
+            if (panel.ColumnStyles.Count > removeStyle)
+                panel.ColumnStyles.RemoveAt(removeStyle);
 
-        //    panel.RowCount--;
-        //}
+            panel.ColumnCount--;
+        }
 
         private void textBoxG1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -306,12 +323,21 @@ namespace Tool
                     ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             if (isChecked)
             {
-                registryKey.SetValue("Lotus Machine App", Application.ExecutablePath);
+                registryKey.SetValue(DEFINITION_VARIABLE.APPLICATION_NAME, Application.ExecutablePath);
             }
             else
             {
-                registryKey.DeleteValue("Lotus Machine App");
+                if (registryKey.GetValueNames().Equals(DEFINITION_VARIABLE.APPLICATION_NAME))
+                {
+                    registryKey.DeleteValue(DEFINITION_VARIABLE.APPLICATION_NAME);
+                }
+                
             }
+        }
+
+        private void FormView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

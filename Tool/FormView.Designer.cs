@@ -768,7 +768,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(506, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(408, 56);
             this.tableLayoutPanel4.TabIndex = 21;
             // 
             // pictureBoxPower
@@ -780,7 +780,7 @@
             this.pictureBoxPower.Image = global::Tool.Properties.Resources.power;
             this.pictureBoxPower.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxPower.Name = "pictureBoxPower";
-            this.pictureBoxPower.Size = new System.Drawing.Size(162, 50);
+            this.pictureBoxPower.Size = new System.Drawing.Size(130, 50);
             this.pictureBoxPower.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPower.TabIndex = 0;
             this.pictureBoxPower.TabStop = false;
@@ -792,9 +792,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxVietnamese.Image = global::Tool.Properties.Resources.vietnamese;
-            this.pictureBoxVietnamese.Location = new System.Drawing.Point(171, 3);
+            this.pictureBoxVietnamese.Location = new System.Drawing.Point(139, 3);
             this.pictureBoxVietnamese.Name = "pictureBoxVietnamese";
-            this.pictureBoxVietnamese.Size = new System.Drawing.Size(162, 50);
+            this.pictureBoxVietnamese.Size = new System.Drawing.Size(130, 50);
             this.pictureBoxVietnamese.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVietnamese.TabIndex = 1;
             this.pictureBoxVietnamese.TabStop = false;
@@ -806,9 +806,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxEnglish.Enabled = false;
             this.pictureBoxEnglish.Image = global::Tool.Properties.Resources.english;
-            this.pictureBoxEnglish.Location = new System.Drawing.Point(339, 3);
+            this.pictureBoxEnglish.Location = new System.Drawing.Point(275, 3);
             this.pictureBoxEnglish.Name = "pictureBoxEnglish";
-            this.pictureBoxEnglish.Size = new System.Drawing.Size(164, 50);
+            this.pictureBoxEnglish.Size = new System.Drawing.Size(130, 50);
             this.pictureBoxEnglish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxEnglish.TabIndex = 2;
             this.pictureBoxEnglish.TabStop = false;
@@ -842,6 +842,7 @@
             this.MinimumSize = new System.Drawing.Size(1000, 750);
             this.Name = "FormView";
             this.Text = "Lotus - Pending Machine";
+            this.Load += new System.EventHandler(this.FormView_Load);
             this.groupBoxDrawing.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

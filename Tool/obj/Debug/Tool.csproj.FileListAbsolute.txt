@@ -41,7 +41,6 @@ C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.exe
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.pdb
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.exe
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.pdb
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormLogin.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormMaterial.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormPaint.resources
@@ -58,3 +57,6 @@ C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\ob
 C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSettingSerial.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.ExitApp.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSettingSerial.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh.mdf
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh_log.ldf
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
