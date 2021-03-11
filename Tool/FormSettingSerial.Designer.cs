@@ -31,43 +31,27 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.sb0 = new System.Windows.Forms.RadioButton();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.db5 = new System.Windows.Forms.RadioButton();
-            this.db6 = new System.Windows.Forms.RadioButton();
-            this.db7 = new System.Windows.Forms.RadioButton();
-            this.db8 = new System.Windows.Forms.RadioButton();
+            this.cbDTR = new System.Windows.Forms.CheckBox();
+            this.cbRTS = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.br9600 = new System.Windows.Forms.RadioButton();
-            this.br115200 = new System.Windows.Forms.RadioButton();
-            this.br921600 = new System.Windows.Forms.RadioButton();
+            this.cbComPort = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonReset = new System.Windows.Forms.Button();
-            this.sb1 = new System.Windows.Forms.RadioButton();
-            this.pbNone = new System.Windows.Forms.RadioButton();
-            this.pbEven = new System.Windows.Forms.RadioButton();
-            this.pbOdd = new System.Windows.Forms.RadioButton();
-            this.cbDTR = new System.Windows.Forms.CheckBox();
-            this.cbRTS = new System.Windows.Forms.CheckBox();
+            this.cbBaudRate = new System.Windows.Forms.ComboBox();
+            this.cbDataBits = new System.Windows.Forms.ComboBox();
+            this.cbParity = new System.Windows.Forms.ComboBox();
+            this.cbStopBits = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,18 +81,18 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.cbStopBits, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.cbParity, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel5, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel4, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel3, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label6, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label7, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbComPort, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbBaudRate, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbDataBits, 2, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 76);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -132,104 +116,27 @@
             this.flowLayoutPanel5.Size = new System.Drawing.Size(124, 129);
             this.flowLayoutPanel5.TabIndex = 11;
             // 
-            // flowLayoutPanel4
+            // cbDTR
             // 
-            this.flowLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel4.Controls.Add(this.pbNone);
-            this.flowLayoutPanel4.Controls.Add(this.pbEven);
-            this.flowLayoutPanel4.Controls.Add(this.pbOdd);
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(131, 202);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(122, 129);
-            this.flowLayoutPanel4.TabIndex = 10;
+            this.cbDTR.AutoSize = true;
+            this.cbDTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbDTR.Location = new System.Drawing.Point(3, 3);
+            this.cbDTR.Name = "cbDTR";
+            this.cbDTR.Size = new System.Drawing.Size(112, 21);
+            this.cbDTR.TabIndex = 0;
+            this.cbDTR.Text = "DTR Enabled";
+            this.cbDTR.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel3
+            // cbRTS
             // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.sb0);
-            this.flowLayoutPanel3.Controls.Add(this.sb1);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 202);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(122, 129);
-            this.flowLayoutPanel3.TabIndex = 9;
-            // 
-            // sb0
-            // 
-            this.sb0.AutoSize = true;
-            this.sb0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sb0.Location = new System.Drawing.Point(3, 3);
-            this.sb0.Name = "sb0";
-            this.sb0.Size = new System.Drawing.Size(34, 21);
-            this.sb0.TabIndex = 5;
-            this.sb0.Text = "0";
-            this.sb0.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.db5);
-            this.flowLayoutPanel2.Controls.Add(this.db6);
-            this.flowLayoutPanel2.Controls.Add(this.db7);
-            this.flowLayoutPanel2.Controls.Add(this.db8);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(259, 36);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(124, 127);
-            this.flowLayoutPanel2.TabIndex = 8;
-            // 
-            // db5
-            // 
-            this.db5.AutoSize = true;
-            this.db5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.db5.Location = new System.Drawing.Point(3, 3);
-            this.db5.Name = "db5";
-            this.db5.Size = new System.Drawing.Size(34, 21);
-            this.db5.TabIndex = 1;
-            this.db5.Text = "5";
-            this.db5.UseVisualStyleBackColor = true;
-            // 
-            // db6
-            // 
-            this.db6.AutoSize = true;
-            this.db6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.db6.Location = new System.Drawing.Point(3, 30);
-            this.db6.Name = "db6";
-            this.db6.Size = new System.Drawing.Size(34, 21);
-            this.db6.TabIndex = 2;
-            this.db6.Text = "6";
-            this.db6.UseVisualStyleBackColor = true;
-            // 
-            // db7
-            // 
-            this.db7.AutoSize = true;
-            this.db7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.db7.Location = new System.Drawing.Point(3, 57);
-            this.db7.Name = "db7";
-            this.db7.Size = new System.Drawing.Size(34, 21);
-            this.db7.TabIndex = 3;
-            this.db7.Text = "7";
-            this.db7.UseVisualStyleBackColor = true;
-            // 
-            // db8
-            // 
-            this.db8.AutoSize = true;
-            this.db8.Checked = true;
-            this.db8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.db8.Location = new System.Drawing.Point(3, 84);
-            this.db8.Name = "db8";
-            this.db8.Size = new System.Drawing.Size(34, 21);
-            this.db8.TabIndex = 4;
-            this.db8.TabStop = true;
-            this.db8.Text = "8";
-            this.db8.UseVisualStyleBackColor = true;
+            this.cbRTS.AutoSize = true;
+            this.cbRTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbRTS.Location = new System.Drawing.Point(3, 30);
+            this.cbRTS.Name = "cbRTS";
+            this.cbRTS.Size = new System.Drawing.Size(111, 21);
+            this.cbRTS.TabIndex = 1;
+            this.cbRTS.Text = "RTS Enabled";
+            this.cbRTS.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -298,7 +205,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 33);
             this.label6.TabIndex = 4;
-            this.label6.Text = "PARITY BITS";
+            this.label6.Text = "PARITY";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -315,65 +222,16 @@
             this.label7.Text = "DTR/RTS";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // cbComPort
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbComPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 28);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.br9600);
-            this.flowLayoutPanel1.Controls.Add(this.br115200);
-            this.flowLayoutPanel1.Controls.Add(this.br921600);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(131, 36);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(122, 127);
-            this.flowLayoutPanel1.TabIndex = 7;
-            // 
-            // br9600
-            // 
-            this.br9600.AutoSize = true;
-            this.br9600.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.br9600.Location = new System.Drawing.Point(3, 3);
-            this.br9600.Name = "br9600";
-            this.br9600.Size = new System.Drawing.Size(58, 21);
-            this.br9600.TabIndex = 0;
-            this.br9600.Text = "9600";
-            this.br9600.UseVisualStyleBackColor = true;
-            // 
-            // br115200
-            // 
-            this.br115200.AutoSize = true;
-            this.br115200.Checked = true;
-            this.br115200.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.br115200.Location = new System.Drawing.Point(3, 30);
-            this.br115200.Name = "br115200";
-            this.br115200.Size = new System.Drawing.Size(74, 21);
-            this.br115200.TabIndex = 1;
-            this.br115200.TabStop = true;
-            this.br115200.Text = "115200";
-            this.br115200.UseVisualStyleBackColor = true;
-            // 
-            // br921600
-            // 
-            this.br921600.AutoSize = true;
-            this.br921600.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.br921600.Location = new System.Drawing.Point(3, 57);
-            this.br921600.Name = "br921600";
-            this.br921600.Size = new System.Drawing.Size(74, 21);
-            this.br921600.TabIndex = 2;
-            this.br921600.Text = "921600";
-            this.br921600.UseVisualStyleBackColor = true;
+            this.cbComPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComPort.FormattingEnabled = true;
+            this.cbComPort.Location = new System.Drawing.Point(3, 36);
+            this.cbComPort.Name = "cbComPort";
+            this.cbComPort.Size = new System.Drawing.Size(122, 32);
+            this.cbComPort.TabIndex = 6;
             // 
             // tableLayoutPanel3
             // 
@@ -448,78 +306,53 @@
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(156, 41);
             this.buttonReset.TabIndex = 0;
-            this.buttonReset.Text = "KHÔI PHỤC\r\nCÀI ĐẶT GỐC\r\n";
+            this.buttonReset.Text = "KHÔI PHỤC\r\n";
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
-            // sb1
+            // cbBaudRate
             // 
-            this.sb1.AutoSize = true;
-            this.sb1.Checked = true;
-            this.sb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sb1.Location = new System.Drawing.Point(3, 30);
-            this.sb1.Name = "sb1";
-            this.sb1.Size = new System.Drawing.Size(34, 21);
-            this.sb1.TabIndex = 6;
-            this.sb1.Text = "1";
-            this.sb1.UseVisualStyleBackColor = true;
+            this.cbBaudRate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbBaudRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBaudRate.FormattingEnabled = true;
+            this.cbBaudRate.Location = new System.Drawing.Point(131, 36);
+            this.cbBaudRate.Name = "cbBaudRate";
+            this.cbBaudRate.Size = new System.Drawing.Size(122, 32);
+            this.cbBaudRate.TabIndex = 12;
             // 
-            // pbNone
+            // cbDataBits
             // 
-            this.pbNone.AutoSize = true;
-            this.pbNone.Checked = true;
-            this.pbNone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pbNone.Location = new System.Drawing.Point(3, 3);
-            this.pbNone.Name = "pbNone";
-            this.pbNone.Size = new System.Drawing.Size(60, 21);
-            this.pbNone.TabIndex = 6;
-            this.pbNone.TabStop = true;
-            this.pbNone.Text = "None";
-            this.pbNone.UseVisualStyleBackColor = true;
+            this.cbDataBits.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbDataBits.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDataBits.FormattingEnabled = true;
+            this.cbDataBits.Location = new System.Drawing.Point(259, 36);
+            this.cbDataBits.Name = "cbDataBits";
+            this.cbDataBits.Size = new System.Drawing.Size(124, 32);
+            this.cbDataBits.TabIndex = 13;
             // 
-            // pbEven
+            // cbParity
             // 
-            this.pbEven.AutoSize = true;
-            this.pbEven.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pbEven.Location = new System.Drawing.Point(3, 30);
-            this.pbEven.Name = "pbEven";
-            this.pbEven.Size = new System.Drawing.Size(58, 21);
-            this.pbEven.TabIndex = 7;
-            this.pbEven.Text = "Even";
-            this.pbEven.UseVisualStyleBackColor = true;
+            this.cbParity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbParity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbParity.FormattingEnabled = true;
+            this.cbParity.Location = new System.Drawing.Point(131, 202);
+            this.cbParity.Name = "cbParity";
+            this.cbParity.Size = new System.Drawing.Size(122, 32);
+            this.cbParity.TabIndex = 14;
             // 
-            // pbOdd
+            // cbStopBits
             // 
-            this.pbOdd.AutoSize = true;
-            this.pbOdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pbOdd.Location = new System.Drawing.Point(3, 57);
-            this.pbOdd.Name = "pbOdd";
-            this.pbOdd.Size = new System.Drawing.Size(53, 21);
-            this.pbOdd.TabIndex = 8;
-            this.pbOdd.Text = "Odd";
-            this.pbOdd.UseVisualStyleBackColor = true;
-            // 
-            // cbDTR
-            // 
-            this.cbDTR.AutoSize = true;
-            this.cbDTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbDTR.Location = new System.Drawing.Point(3, 3);
-            this.cbDTR.Name = "cbDTR";
-            this.cbDTR.Size = new System.Drawing.Size(112, 21);
-            this.cbDTR.TabIndex = 0;
-            this.cbDTR.Text = "DTR Enabled";
-            this.cbDTR.UseVisualStyleBackColor = true;
-            // 
-            // cbRTS
-            // 
-            this.cbRTS.AutoSize = true;
-            this.cbRTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbRTS.Location = new System.Drawing.Point(3, 30);
-            this.cbRTS.Name = "cbRTS";
-            this.cbRTS.Size = new System.Drawing.Size(111, 21);
-            this.cbRTS.TabIndex = 1;
-            this.cbRTS.Text = "RTS Enabled";
-            this.cbRTS.UseVisualStyleBackColor = true;
+            this.cbStopBits.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbStopBits.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStopBits.FormattingEnabled = true;
+            this.cbStopBits.Location = new System.Drawing.Point(3, 202);
+            this.cbStopBits.Name = "cbStopBits";
+            this.cbStopBits.Size = new System.Drawing.Size(122, 32);
+            this.cbStopBits.TabIndex = 15;
             // 
             // FormSettingSerial
             // 
@@ -535,14 +368,6 @@
             this.tableLayoutPanel2.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
@@ -565,24 +390,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.RadioButton sb0;
-        private System.Windows.Forms.RadioButton db5;
-        private System.Windows.Forms.RadioButton db6;
-        private System.Windows.Forms.RadioButton db7;
-        private System.Windows.Forms.RadioButton db8;
-        private System.Windows.Forms.RadioButton br9600;
-        private System.Windows.Forms.RadioButton br115200;
-        private System.Windows.Forms.RadioButton br921600;
-        private System.Windows.Forms.RadioButton sb1;
+        private System.Windows.Forms.ComboBox cbComPort;
         private System.Windows.Forms.CheckBox cbDTR;
         private System.Windows.Forms.CheckBox cbRTS;
-        private System.Windows.Forms.RadioButton pbNone;
-        private System.Windows.Forms.RadioButton pbEven;
-        private System.Windows.Forms.RadioButton pbOdd;
+        private System.Windows.Forms.ComboBox cbStopBits;
+        private System.Windows.Forms.ComboBox cbParity;
+        private System.Windows.Forms.ComboBox cbBaudRate;
+        private System.Windows.Forms.ComboBox cbDataBits;
     }
 }

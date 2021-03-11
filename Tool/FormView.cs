@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Configuration;
 using System.Data.SqlClient;
+using Tool.Properties;
 
 namespace Tool
 {
@@ -39,7 +40,7 @@ namespace Tool
 #endif
             InitializeComponent();
 
-            if(string.Equals(DEFINITION_VARIABLE.BUILD_TYPE,DEFINITION_VARIABLE.BUILD_TYPE_CUSTOMIZE))
+            if(string.Equals(Settings.Default["BUILD_TYPE"].ToString(), Settings.Default["TYPE_MINI"].ToString()))
             {
                 // Mini version
                 buttonDraw.Visible = false;
@@ -323,13 +324,13 @@ namespace Tool
                     ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             if (isChecked)
             {
-                registryKey.SetValue(DEFINITION_VARIABLE.APPLICATION_NAME, Application.ExecutablePath);
+                registryKey.SetValue(Settings.Default["APPLICATION_NAME"].ToString(), Application.ExecutablePath);
             }
             else
             {
-                if (registryKey.GetValueNames().Equals(DEFINITION_VARIABLE.APPLICATION_NAME))
+                if (registryKey.GetValueNames().Equals(Settings.Default["APPLICATION_NAME"].ToString()))
                 {
-                    registryKey.DeleteValue(DEFINITION_VARIABLE.APPLICATION_NAME);
+                    registryKey.DeleteValue(Settings.Default["APPLICATION_NAME"].ToString());
                 }
                 
             }

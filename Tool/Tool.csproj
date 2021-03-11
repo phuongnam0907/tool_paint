@@ -70,7 +70,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataGocCanhDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DEFINITION_VARIABLE.cs" />
     <Compile Include="ExitApp.cs">
       <SubType>Form</SubType>
     </Compile>
