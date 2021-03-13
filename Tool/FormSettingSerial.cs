@@ -25,6 +25,8 @@ namespace Tool
         private static string DEFAULT_DATABITS = "8";
         private static string DEFAULT_PARITY = "None";
         private static string DEFAULT_STOPBITS = "One";
+        private static bool DEFAULT_DTR = false;
+        private static bool DEFAULT_RTS = false;
 
         public FormSettingSerial(int userLevel)
         {
@@ -56,6 +58,9 @@ namespace Tool
             cbParity.SelectedItem = Settings.Default["PARITY"].ToString();
             cbStopBits.SelectedItem = Settings.Default["STOPBITS"].ToString();
 
+            cbDTR.Checked = Settings.Default.DTR;
+            cbRTS.Checked = Settings.Default.RTS;
+
             Invalidate();
         }
 
@@ -75,6 +80,8 @@ namespace Tool
             cbDataBits.SelectedItem = DEFAULT_DATABITS;
             cbParity.SelectedItem = DEFAULT_PARITY;
             cbStopBits.SelectedItem = DEFAULT_STOPBITS;
+            cbDTR.Checked = DEFAULT_DTR;
+            cbRTS.Checked = DEFAULT_RTS;
 
             SetSerialConfiguration();
         }
@@ -85,12 +92,16 @@ namespace Tool
             Settings.Default["DATABITS"] = cbDataBits.GetItemText(cbDataBits.SelectedItem);
             Settings.Default["PARITY"] = cbParity.GetItemText(cbParity.SelectedItem);
             Settings.Default["STOPBITS"] = cbStopBits.GetItemText(cbStopBits.SelectedItem);
+            Settings.Default["DTR"] = cbDTR.Checked;
+            Settings.Default["RTS"] = cbRTS.Checked;
             Settings.Default.Save();
 
             SerialCommunicator.SerialPort.BaudRate = Convert.ToInt32(cbBaudRate.GetItemText(cbBaudRate.SelectedItem));
             SerialCommunicator.SerialPort.DataBits = Convert.ToInt16(cbDataBits.GetItemText(cbDataBits.SelectedItem));
             SerialCommunicator.SerialPort.Parity = (Parity)Enum.Parse(typeof(Parity), cbParity.GetItemText(cbParity.SelectedItem));
             SerialCommunicator.SerialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbStopBits.GetItemText(cbStopBits.SelectedItem));
+            SerialCommunicator.SerialPort.DtrEnable = cbDTR.Checked;
+            SerialCommunicator.SerialPort.RtsEnable = cbRTS.Checked;
         }
     }
 }

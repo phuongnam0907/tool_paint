@@ -40,14 +40,17 @@
     <Setting Name="TYPE_FULL" Type="System.String" Scope="Application">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="DTR" Type="System.Boolean" Scope="Application">
+    <Setting Name="DTR" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="RTS" Type="System.Boolean" Scope="Application">
+    <Setting Name="RTS" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="COMPORT" Type="System.String" Scope="User">
       <Value Profile="(Default)">COM?</Value>
+    </Setting>
+    <Setting Name="FIRST_USED" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

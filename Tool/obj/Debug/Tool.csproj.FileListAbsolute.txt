@@ -60,3 +60,4 @@ C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSettingSeria
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh.mdf
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh_log.ldf
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormFirstUsed.resources

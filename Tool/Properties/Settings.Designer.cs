@@ -139,21 +139,27 @@ namespace Tool.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool DTR {
             get {
                 return ((bool)(this["DTR"]));
             }
+            set {
+                this["DTR"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool RTS {
             get {
                 return ((bool)(this["RTS"]));
+            }
+            set {
+                this["RTS"] = value;
             }
         }
         
@@ -166,6 +172,18 @@ namespace Tool.Properties {
             }
             set {
                 this["COMPORT"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FIRST_USED {
+            get {
+                return ((bool)(this["FIRST_USED"]));
+            }
+            set {
+                this["FIRST_USED"] = value;
             }
         }
     }

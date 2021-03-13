@@ -76,6 +76,12 @@
     <Compile Include="ExitApp.Designer.cs">
       <DependentUpon>ExitApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFirstUsed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFirstUsed.Designer.cs">
+      <DependentUpon>FormFirstUsed.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="SerialCommunicator.cs" />
     <EmbeddedResource Include="ExitApp.resx">
       <DependentUpon>ExitApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFirstUsed.resx">
+      <DependentUpon>FormFirstUsed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -353,6 +362,7 @@
       <DependentUpon>DataGocCanh.mdf</DependentUpon>
     </Content>
     <Content Include="icon.ico" />
+    <Content Include="Resources\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

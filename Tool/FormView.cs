@@ -12,6 +12,7 @@ using Microsoft.Win32;
 using System.Configuration;
 using System.Data.SqlClient;
 using Tool.Properties;
+using System.Threading;
 
 namespace Tool
 {
@@ -28,8 +29,10 @@ namespace Tool
         private bool isRunAuto = false;
         private bool isRunManual = false;
         private bool isKeypadShown = false;
+        private bool isConnected = false;
         Keypad numKey = new Keypad();
         private string dataViewConnectString;
+        private Thread backgroundThread;
 
         public FormView()
         {
@@ -56,9 +59,13 @@ namespace Tool
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+
             pictureBoxShow.Paint += pictureBoxShow_Paint;
 
             dataViewConnectString = ConfigurationManager.ConnectionStrings["Tool.Properties.Settings.DataGocCanhConnectionString"].ConnectionString;
+
+            ThreadStart ts = new ThreadStart(checkSerialConnection);
+            backgroundThread = new Thread(ts);
 
             Invalidate();
 
@@ -338,7 +345,66 @@ namespace Tool
 
         private void FormView_Load(object sender, EventArgs e)
         {
-
+#if DEBUG
+            Settings.Default["COMPORT"] = "COM?";
+            Settings.Default["FIRST_USED"] = true;
+            Settings.Default.Save();
+#endif
+            if (Settings.Default.FIRST_USED == true)
+            {
+                FormFirstUsed formFirstUsed = new FormFirstUsed(Settings.Default.FIRST_USED);
+                formFirstUsed.Show();
+                formFirstUsed.SetFirstTime += FormFirstUsed_SetFirstTime;
+            }
+            else
+            {
+                if (!SerialCommunicator.SerialPort.IsOpen)
+                {
+                    if ((Settings.Default.COMPORT.ToString().Equals("") == true) || (Settings.Default.COMPORT.ToString().Equals("COM?") == true))
+                    {
+                        FormFirstUsed formFirstUsed = new FormFirstUsed(Settings.Default.FIRST_USED);
+                        formFirstUsed.Show();
+                        formFirstUsed.SetFirstTime += FormFirstUsed_SetFirstTime;
+                    }
+                    else
+                    {
+                        SerialCommunicator.SerialPort.Open();
+                        backgroundThread.Start();
+                    }
+                }
+                
+            }
         }
+
+        private void FormFirstUsed_SetFirstTime(bool isFirstTime)
+        {
+            Settings.Default["FIRST_USED"] = isFirstTime;
+            Settings.Default.Save();
+            backgroundThread.Start();
+        }
+
+        private async void checkSerialConnection()
+        {
+            while (true)
+            {
+                if (SerialCommunicator.SerialPort.IsOpen == false)
+                {
+                    backgroundThread.Suspend();
+                    if ((Settings.Default.COMPORT.ToString().Equals("") == true) || (Settings.Default.COMPORT.ToString().Equals("COM?") == true))
+                    {
+                        FormFirstUsed formFirstUsed = new FormFirstUsed(Settings.Default.FIRST_USED);
+                        formFirstUsed.Show();
+                        formFirstUsed.SetFirstTime += FormFirstUsed_SetFirstTime;
+                    }
+                    else
+                    {
+                        SerialCommunicator.SerialPort.Open();
+                        backgroundThread.Start();
+                    }
+                }
+                await Task.Delay(1000);
+            }
+        }
+
     }
 }
