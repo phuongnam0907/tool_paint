@@ -36,6 +36,7 @@ namespace Tool
 #else
             ShutDownPC(true);
 #endif
+            Environment.Exit(1);
 
         }
 

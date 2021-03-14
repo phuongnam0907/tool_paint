@@ -842,6 +842,7 @@
             this.MinimumSize = new System.Drawing.Size(1000, 750);
             this.Name = "FormView";
             this.Text = "Lotus - Pending Machine";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormView_FormClosing);
             this.Load += new System.EventHandler(this.FormView_Load);
             this.groupBoxDrawing.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

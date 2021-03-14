@@ -13,6 +13,8 @@ using System.Configuration;
 using System.Data.SqlClient;
 using Tool.Properties;
 using System.Threading;
+using System.IO.Ports;
+using System.IO;
 
 namespace Tool
 {
@@ -29,10 +31,11 @@ namespace Tool
         private bool isRunAuto = false;
         private bool isRunManual = false;
         private bool isKeypadShown = false;
-        private bool isConnected = false;
+        private bool isWarningConnect = false;
         Keypad numKey = new Keypad();
         private string dataViewConnectString;
         private Thread backgroundThread;
+        private WarningConnect warningConnect;
 
         public FormView()
         {
@@ -66,6 +69,8 @@ namespace Tool
 
             ThreadStart ts = new ThreadStart(checkSerialConnection);
             backgroundThread = new Thread(ts);
+
+            warningConnect = new WarningConnect(this);
 
             Invalidate();
 
@@ -346,33 +351,20 @@ namespace Tool
         private void FormView_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            Settings.Default["COMPORT"] = "COM?";
-            Settings.Default["FIRST_USED"] = true;
-            Settings.Default.Save();
+            //Settings.Default["COMPORT"] = "COM?";
+            //Settings.Default["FIRST_USED"] = true;
+            //Settings.Default.Save();
 #endif
             if (Settings.Default.FIRST_USED == true)
             {
+                isWarningConnect = true;
                 FormFirstUsed formFirstUsed = new FormFirstUsed(Settings.Default.FIRST_USED);
                 formFirstUsed.Show();
                 formFirstUsed.SetFirstTime += FormFirstUsed_SetFirstTime;
             }
             else
             {
-                if (!SerialCommunicator.SerialPort.IsOpen)
-                {
-                    if ((Settings.Default.COMPORT.ToString().Equals("") == true) || (Settings.Default.COMPORT.ToString().Equals("COM?") == true))
-                    {
-                        FormFirstUsed formFirstUsed = new FormFirstUsed(Settings.Default.FIRST_USED);
-                        formFirstUsed.Show();
-                        formFirstUsed.SetFirstTime += FormFirstUsed_SetFirstTime;
-                    }
-                    else
-                    {
-                        SerialCommunicator.SerialPort.Open();
-                        backgroundThread.Start();
-                    }
-                }
-                
+                backgroundThread.Start();
             }
         }
 
@@ -381,29 +373,106 @@ namespace Tool
             Settings.Default["FIRST_USED"] = isFirstTime;
             Settings.Default.Save();
             backgroundThread.Start();
+            isWarningConnect = false;
         }
 
         private async void checkSerialConnection()
         {
             while (true)
             {
-                if (SerialCommunicator.SerialPort.IsOpen == false)
+                try
                 {
-                    backgroundThread.Suspend();
-                    if ((Settings.Default.COMPORT.ToString().Equals("") == true) || (Settings.Default.COMPORT.ToString().Equals("COM?") == true))
+                    string[] listPort = SerialPort.GetPortNames();
+                    if (listPort.Contains(Settings.Default.COMPORT.ToString()) == true)
                     {
-                        FormFirstUsed formFirstUsed = new FormFirstUsed(Settings.Default.FIRST_USED);
-                        formFirstUsed.Show();
-                        formFirstUsed.SetFirstTime += FormFirstUsed_SetFirstTime;
+                        if (SerialCommunicator.SerialPort.IsOpen == false)
+                        {
+                            //    warningConnect.Invoke(() =>
+                            //    {
+                            //        this.BeginInvoke((Action)delegate ()
+                            //        {
+                            //            warningConnect.Show();
+                            //        });
+
+                            //        while (!SerialCommunicator.SerialPort.IsOpen)
+                            //        {
+                            //            string[] listPort = SerialPort.GetPortNames();
+                            //            if (listPort.Contains(Settings.Default.COMPORT.ToString()) == true)
+                            //            {
+                            //                if (!SerialCommunicator.SerialPort.IsOpen)
+                            //                {
+                            //                    SerialCommunicator.SerialPort.Open();
+                            //                    if (SerialCommunicator.SerialPort.IsOpen)
+                            //                    {
+                            //                        this.BeginInvoke((Action)delegate ()
+                            //                        {
+                            //                            warningConnect.Hide();
+                            //                        });
+                            //                    }
+                            //                }
+
+                            //            }
+                            //        }
+
+                            //    });
+                            buttonChooseMaterial.Invoke(() => { buttonChooseMaterial.Enabled = false; });
+                            buttonSelect.Invoke(() => { buttonSelect.Enabled = false; });
+                            buttonDraw.Invoke(() => { buttonDraw.Enabled = false; });
+                            buttonClearCounter.Invoke(() => { buttonClearCounter.Enabled = false; });
+                            buttonRunManual.Invoke(() => { buttonRunManual.Enabled = false; });
+                            buttonRunAuto.Invoke(() => { buttonRunAuto.Enabled = false; });
+                            tableLayoutPanel2.Invoke(() => { tableLayoutPanel2.Enabled = false; });
+                            tableLayoutPanel3.Invoke(() => { tableLayoutPanel3.Enabled = false; });
+                            pictureBoxShow.Invoke(() => { pictureBoxShow.Enabled = false; });
+                            SerialCommunicator.SerialPort.Open();
+                        }
+                        else
+                        {
+                            buttonChooseMaterial.Invoke(() => { buttonChooseMaterial.Enabled = true; });
+                            buttonSelect.Invoke(() => { buttonSelect.Enabled = true; });
+                            buttonDraw.Invoke(() => { buttonDraw.Enabled = true; });
+                            buttonClearCounter.Invoke(() => { buttonClearCounter.Enabled = true; });
+                            buttonRunManual.Invoke(() => { buttonRunManual.Enabled = true; });
+                            buttonRunAuto.Invoke(() => { buttonRunAuto.Enabled = true; });
+                            tableLayoutPanel2.Invoke(() => { tableLayoutPanel2.Enabled = true; });
+                            tableLayoutPanel3.Invoke(() => { tableLayoutPanel3.Enabled = true; });
+                            pictureBoxShow.Invoke(() => { pictureBoxShow.Enabled = true; });
+                        }
                     }
                     else
                     {
-                        SerialCommunicator.SerialPort.Open();
-                        backgroundThread.Start();
+                        if (SerialCommunicator.SerialPort.IsOpen == true)
+                        {
+                            SerialCommunicator.SerialPort.Close();
+                        }
+                        buttonChooseMaterial.Invoke(() => { buttonChooseMaterial.Enabled = false; });
+                        buttonSelect.Invoke(() => { buttonSelect.Enabled = false; });
+                        buttonDraw.Invoke(() => { buttonDraw.Enabled = false; });
+                        buttonClearCounter.Invoke(() => { buttonClearCounter.Enabled = false; });
+                        buttonRunManual.Invoke(() => { buttonRunManual.Enabled = false; });
+                        buttonRunAuto.Invoke(() => { buttonRunAuto.Enabled = false; });
+                        tableLayoutPanel2.Invoke(() => { tableLayoutPanel2.Enabled = false; });
+                        tableLayoutPanel3.Invoke(() => { tableLayoutPanel3.Enabled = false; });
+                        pictureBoxShow.Invoke(() => { pictureBoxShow.Enabled = false; });
+                    }
+                } catch (IOException ioe)
+                {
+                    try
+                    {
+                        SerialCommunicator.SerialPort.Dispose();
+                    } catch (ObjectDisposedException e)
+                    {
+                        SerialCommunicator.SerialPort = null;
                     }
                 }
-                await Task.Delay(1000);
+                await Task.Delay(500);
             }
+        }
+
+        private void FormView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            backgroundThread.Abort();
+            //this.Close();
         }
 
     }

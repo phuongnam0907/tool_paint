@@ -17,6 +17,7 @@ namespace Tool
     {
         public delegate void FirsTime(bool isFirstTime);
         public event FirsTime SetFirstTime;
+        private System.Threading.Timer timer;
 
         private List<string> list = new List<string>();
 
@@ -64,7 +65,7 @@ namespace Tool
                 comboBox1.SelectedIndex = -1;
             }
 
-            System.Threading.Timer timer = new System.Threading.Timer(new System.Threading.TimerCallback(MyIntervalFunction));
+            timer = new System.Threading.Timer(new System.Threading.TimerCallback(UpdateSerialPortNames));
             timer.Change(0, 500);
 
         }
@@ -86,6 +87,7 @@ namespace Tool
                     {
                         Settings.Default["COMPORT"] = comboBox1.GetItemText(comboBox1.SelectedItem);
                         Settings.Default.Save();
+                        timer.Dispose();
                         this.Close();
                     }
                     else
@@ -102,7 +104,7 @@ namespace Tool
             }
         }
 
-        private void MyIntervalFunction(object obj)
+        private void UpdateSerialPortNames(object obj)
         {
             List<string> temp = new List<string>();
             temp.AddRange(SerialPort.GetPortNames());
@@ -128,26 +130,6 @@ namespace Tool
                 });
                 
             }
-        }
-    }
-
-    public static class ControlExtensions
-    {
-        public static void Invoke(this Control control, Action action)
-        {
-            if (control.InvokeRequired)
-            {
-                control.Invoke(new MethodInvoker(action), null);
-            }
-            else
-            {
-                action.Invoke();
-            }
-        }
-
-        public static List<T> GetClone<T>(this List<T> source)
-        {
-            return source.GetRange(0, source.Count);
         }
     }
 }

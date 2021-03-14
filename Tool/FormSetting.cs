@@ -23,6 +23,8 @@ namespace Tool
             //this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+
+            controlPermission();
         }
 
         private void buttonLoginFromSetting_Click(object sender, EventArgs e)
@@ -63,6 +65,8 @@ namespace Tool
                     break;
             }
             labelStatusUser.Text = "Người Dùng\n Mức " + lv;
+
+            controlPermission();
         }
 
         private void buttonSaveSettings_Click(object sender, EventArgs e)
@@ -275,6 +279,20 @@ namespace Tool
         {
             numKey.setTextBox(textBoxThoiGianTreApSuatInox);
             numKey.Show();
+        }
+
+        private void controlPermission()
+        {
+            if (permissionUser > 0)
+            {
+                tabControl.Enabled = true;
+                buttonSaveSettings.Enabled = true;
+            }
+            else
+            {
+                tabControl.Enabled = false;
+                buttonSaveSettings.Enabled = false;
+            }
         }
     }
 }
