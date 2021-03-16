@@ -219,6 +219,7 @@ namespace Tool
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            if (textBox.Text == "") textBox.Text = "0";
             this.Hide();
         }
 

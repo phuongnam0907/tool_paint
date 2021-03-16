@@ -85,7 +85,7 @@ namespace Tool
                     SerialCommunicator.SerialPort.Open();
                     if (SerialCommunicator.SerialPort.IsOpen)
                     {
-                        Settings.Default["COMPORT"] = comboBox1.GetItemText(comboBox1.SelectedItem);
+                        Settings.Default["="] = comboBox1.GetItemText(comboBox1.SelectedItem);
                         Settings.Default.Save();
                         timer.Dispose();
                         this.Close();

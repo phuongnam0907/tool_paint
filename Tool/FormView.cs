@@ -35,7 +35,10 @@ namespace Tool
         Keypad numKey = new Keypad();
         private string dataViewConnectString;
         private Thread backgroundThread;
+        private Thread sendDataThread;
         private WarningConnect warningConnect;
+        private const int MAX_IMAGE_COUNT = 30;
+        private List<ImageObject> listImages = new List<ImageObject>();
 
         public FormView()
         {
@@ -69,6 +72,10 @@ namespace Tool
 
             ThreadStart ts = new ThreadStart(checkSerialConnection);
             backgroundThread = new Thread(ts);
+
+            ThreadStart thread = new ThreadStart(sendData);
+            sendDataThread = new Thread(thread);
+            sendDataThread.Start();
 
             warningConnect = new WarningConnect(this);
 
@@ -107,7 +114,6 @@ namespace Tool
             {
                 buttonRunManual.Text = "CHẠY TAY\nON";
                 buttonRunAuto.BackColor = Color.Lavender;
-                textBoxCurentNumber.Text = "20";
             }
             buttonRunAuto.Enabled = isRunManual;
             isRunManual = !isRunManual;
@@ -119,12 +125,13 @@ namespace Tool
             if (isRunAuto)
             {
                 buttonRunAuto.Text = "TỰ ĐỘNG\nOFF";
-                buttonRunManual.BackColor = Color.CornflowerBlue;
+                buttonRunManual.BackColor = Color.CornflowerBlue; 
             }
             else
             {
                 buttonRunAuto.Text = "TỰ ĐỘNG\nON";
                 buttonRunManual.BackColor = Color.Lavender;
+                if (textBoxCurentNumber.Text == "0") textBoxCurentNumber.Text = textBoxTotalNumber.Text;
             }
             buttonRunManual.Enabled = isRunAuto;
             isRunAuto = !isRunAuto;
@@ -350,6 +357,7 @@ namespace Tool
 
         private void FormView_Load(object sender, EventArgs e)
         {
+            parseDataImage();
 #if DEBUG
             //Settings.Default["COMPORT"] = "COM?";
             //Settings.Default["FIRST_USED"] = true;
@@ -366,6 +374,20 @@ namespace Tool
             {
                 backgroundThread.Start();
             }
+
+            textBoxL1.Text = Settings.Default.L1.ToString();
+            textBoxL2.Text = Settings.Default.L2.ToString();
+            textBoxL3.Text = Settings.Default.L3.ToString();
+            textBoxL4.Text = Settings.Default.L4.ToString();
+            textBoxL5.Text = Settings.Default.L5.ToString();
+            textBoxL6.Text = Settings.Default.L6.ToString();
+            textBoxL7.Text = Settings.Default.L7.ToString();
+            textBoxG1.Text = Settings.Default.G1.ToString();
+            textBoxG2.Text = Settings.Default.G2.ToString();
+            textBoxG3.Text = Settings.Default.G3.ToString();
+            textBoxG4.Text = Settings.Default.G4.ToString();
+            textBoxCurentNumber.Text = Settings.Default.SANPHAMCHAY.ToString();
+            textBoxTotalNumber.Text = Settings.Default.SANPHAM.ToString();
         }
 
         private void FormFirstUsed_SetFirstTime(bool isFirstTime)
@@ -382,6 +404,7 @@ namespace Tool
             {
                 try
                 {
+                    
                     string[] listPort = SerialPort.GetPortNames();
                     if (listPort.Contains(Settings.Default.COMPORT.ToString()) == true)
                     {
@@ -424,6 +447,7 @@ namespace Tool
                             tableLayoutPanel2.Invoke(() => { tableLayoutPanel2.Enabled = false; });
                             tableLayoutPanel3.Invoke(() => { tableLayoutPanel3.Enabled = false; });
                             pictureBoxShow.Invoke(() => { pictureBoxShow.Enabled = false; });
+                            SerialCommunicator.SerialPort.PortName = Settings.Default.COMPORT.ToString();
                             SerialCommunicator.SerialPort.Open();
                         }
                         else
@@ -441,10 +465,17 @@ namespace Tool
                     }
                     else
                     {
-                        if (SerialCommunicator.SerialPort.IsOpen == true)
+                        try
                         {
-                            SerialCommunicator.SerialPort.Close();
+                            if (SerialCommunicator.SerialPort.IsOpen == true)
+                            {
+                                SerialCommunicator.SerialPort.Close();
+                                
+                            }
                         }
+                        catch (ObjectDisposedException e) { Console.WriteLine("Caught: {0}", e.Message); }
+                        catch (IOException e) { Console.WriteLine("Caught: {0}", e.Message); }
+
                         buttonChooseMaterial.Invoke(() => { buttonChooseMaterial.Enabled = false; });
                         buttonSelect.Invoke(() => { buttonSelect.Enabled = false; });
                         buttonDraw.Invoke(() => { buttonDraw.Enabled = false; });
@@ -455,16 +486,9 @@ namespace Tool
                         tableLayoutPanel3.Invoke(() => { tableLayoutPanel3.Enabled = false; });
                         pictureBoxShow.Invoke(() => { pictureBoxShow.Enabled = false; });
                     }
-                } catch (IOException ioe)
-                {
-                    try
-                    {
-                        SerialCommunicator.SerialPort.Dispose();
-                    } catch (ObjectDisposedException e)
-                    {
-                        SerialCommunicator.SerialPort = null;
-                    }
                 }
+                catch (IOException e) { Console.WriteLine("Caught: {0}", e.Message); }
+                catch (ObjectDisposedException e) { Console.WriteLine("Caught: {0}", e.Message); }
                 await Task.Delay(500);
             }
         }
@@ -472,8 +496,155 @@ namespace Tool
         private void FormView_FormClosing(object sender, FormClosingEventArgs e)
         {
             backgroundThread.Abort();
-            //this.Close();
         }
 
+        private void textBoxL1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL1.Text == "") Settings.Default["L1"] = "0";
+            else Settings.Default["L1"] = textBoxL1.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxL2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL2.Text == "") Settings.Default["L2"] = "0";
+            else Settings.Default["L2"] = textBoxL2.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxL3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL3.Text == "") Settings.Default["L3"] = "0";
+            else Settings.Default["L3"] = textBoxL3.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxL4_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL4.Text == "") Settings.Default["L4"] = "0";
+            else Settings.Default["L4"] = textBoxL4.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxL5_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL5.Text == "") Settings.Default["L5"] = "0";
+            else Settings.Default["L5"] = textBoxL5.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxL6_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL6.Text == "") Settings.Default["L6"] = "0";
+            else Settings.Default["6"] = textBoxL6.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxL7_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxL7.Text == "") Settings.Default["L7"] = "0";
+            else Settings.Default["L7"] = textBoxL7.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxG1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxG1.Text == "") Settings.Default["G1"] = "0";
+            else Settings.Default["G1"] = textBoxG1.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxG2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxG2.Text == "") Settings.Default["G2"] = "0";
+            else Settings.Default["G2"] = textBoxG2.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxG3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxG3.Text == "") Settings.Default["G3"] = "0";
+            else Settings.Default["G3"] = textBoxG3.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxG4_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxG4.Text == "") Settings.Default["G4"] = "0";
+            else Settings.Default["G4"] = textBoxG4.Text;
+            Settings.Default.Save();
+        }
+
+        private void textBoxTotalNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxTotalNumber.Text == "") Settings.Default["SANPHAM"] = "0";
+            else Settings.Default["SANPHAM"] = textBoxTotalNumber.Text;
+            Settings.Default.Save();
+        }
+
+        private void sendData()
+        {
+            while (true)
+            {
+                if (isRunAuto)
+                {
+                    int start = Int32.Parse(textBoxTotalNumber.Text);
+                    if (start > 0)
+                    {
+                        int count = Int32.Parse(textBoxCurentNumber.Text);
+                        if (count > 0)
+                        {
+                            count--;
+                            textBoxCurentNumber.Invoke(() => {
+                                textBoxCurentNumber.Text = count.ToString();
+                                Settings.Default["SANPHAMCHAY"] = count.ToString();
+                                Settings.Default.Save();
+                            });
+                            Thread.Sleep(1000);
+
+                        }
+                    }
+                }
+            }     
+        }
+
+        private void textBoxCurentNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxCurentNumber.Text == "") Settings.Default["SANPHAMCHAY"] = "0";
+            else Settings.Default["SANPHAMCHAY"] = textBoxCurentNumber.Text;
+            Settings.Default.Save();
+        }
+
+        private void parseDataImage()
+        {
+            XmlClass xml = new XmlClass();
+            
+            if (!xml.Exist())
+            {
+                for (int i = 1; i <= MAX_IMAGE_COUNT; i++)
+                {
+                    xml.Data.ListImages.Add(new ImageObject(i, "sample_" + i.ToString(), new ImageParameters(
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true),
+                        new ImageValues(0, true))));
+                }
+                xml.Create();
+            }
+
+            if (xml.Exist())
+            {
+
+            }
+
+
+        }
     }
 }

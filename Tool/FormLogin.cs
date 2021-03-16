@@ -38,7 +38,7 @@ namespace Tool
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || (!username.Equals(password)))
             {
-                MessageBox.Show("Wrong username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                new FormNotice("Sai tài khoản hoặc mật khẩu").Show();
                 return;
             }
 
@@ -47,6 +47,8 @@ namespace Tool
             else if (username.Equals("3") && password.Equals("3")) permissionUser = 3;
             else if (username.Equals("4") && password.Equals("4")) permissionUser = 4;
             else permissionUser = 0;
+
+            new FormNotice("Đăng nhập thành công!").Show();
 
             if (LoginEvent != null)
             {

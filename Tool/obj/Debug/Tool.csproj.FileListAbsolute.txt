@@ -1,64 +1,22 @@
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\bin\Debug\Tool.exe.config
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\bin\Debug\Tool.exe
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\bin\Debug\Tool.pdb
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormView.resources
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.Properties.Resources.resources
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.exe
-c:\users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.pdb
-C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormPaint.resources
-C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormSelect.resources
-C:\Users\user\documents\visual studio 2015\Projects\Tool\Tool\obj\Debug\Tool.FormSetting.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.exe.config
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.exe
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.pdb
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.exe
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.pdb
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormPaint.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSelect.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSetting.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormView.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Properties.Resources.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.exe.config
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.exe
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.exe
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\bin\Debug\Tool.pdb
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormPaint.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSelect.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSetting.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormView.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Properties.Resources.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormLogin.resources
-C:\Users\user\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormMaterial.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh.mdf
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh_log.ldf
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.exe.config
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.exe
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.pdb
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.exe
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.pdb
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.ExitApp.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormFirstUsed.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormLogin.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormMaterial.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormPaint.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSelect.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSetting.resources
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormView.resources
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Properties.Resources.resources
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Keypad.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormLogin.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormMaterial.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.Keypad.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.ExitApp.resources
-C:\Users\phuon\OneDrive\Documents\Visual Studio 2015\Projects\tool_paint\Tool\obj\Debug\Tool.FormSettingSerial.resources
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.ExitApp.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormSettingSerial.resources
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh.mdf
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh_log.ldf
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormFirstUsed.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormView.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Keypad.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.Properties.Resources.resources
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.WarningConnect.resources
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csproj.GenerateResource.Cache
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.exe
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.pdb
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.csprojResolveAssemblyReference.cache
+C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\obj\Debug\Tool.FormNotice.resources

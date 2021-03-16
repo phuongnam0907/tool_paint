@@ -83,6 +83,8 @@ namespace Tool
         private void buttonSave_Click(object sender, EventArgs e)
         {
             SetSerialConfiguration();
+
+            new FormNotice("Lưu thành công").Show();
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
@@ -96,6 +98,8 @@ namespace Tool
             cbRTS.Checked = DEFAULT_RTS;
 
             SetSerialConfiguration();
+
+            new FormNotice("Khôi phục thành công").Show();
         }
 
         private void SetSerialConfiguration()

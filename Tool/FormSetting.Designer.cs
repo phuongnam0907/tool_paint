@@ -38,13 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.textBoxEncoder = new System.Windows.Forms.TextBox();
             this.textBoxDKPully = new System.Windows.Forms.TextBox();
             this.textBoxCDBuCat = new System.Windows.Forms.TextBox();
@@ -52,13 +45,20 @@
             this.textBoxDKSat = new System.Windows.Forms.TextBox();
             this.textBoxKeoChamCuoi = new System.Windows.Forms.TextBox();
             this.textBoxCT = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBoxCL = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.textBoxTreCT = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.textBoxTreBL = new System.Windows.Forms.TextBox();
+            this.textBoxTreDongTac = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBoxTreBeToiSensor = new System.Windows.Forms.TextBox();
             this.textBoxThoiGianTreKeoCham = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.textBoxVongLoXo = new System.Windows.Forms.TextBox();
-            this.textBoxTreDongTac = new System.Windows.Forms.TextBox();
             this.tabPageRunManual = new System.Windows.Forms.TabPage();
             this.tabPageTimeRunAuto = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -142,7 +142,6 @@
             this.textBoxThoiGianTreApSuatSat = new System.Windows.Forms.TextBox();
             this.textBoxChieuDaiBuCatInox = new System.Windows.Forms.TextBox();
             this.textBoxChieuDaiBuSaiInox = new System.Windows.Forms.TextBox();
-            this.textBoxKeoChamCuoiInox = new System.Windows.Forms.TextBox();
             this.textBoxTreCatToiInox = new System.Windows.Forms.TextBox();
             this.textBoxTreBeLuiInox = new System.Windows.Forms.TextBox();
             this.textBoxTreDongTacInox = new System.Windows.Forms.TextBox();
@@ -155,6 +154,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBoxKeoChamCuoiInox = new System.Windows.Forms.TextBox();
             this.buttonSaveSettings = new System.Windows.Forms.Button();
             this.buttonLoginFromSetting = new System.Windows.Forms.Button();
             this.labelStatusUser = new System.Windows.Forms.Label();
@@ -222,249 +222,159 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label19, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxEncoder, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxDKPully, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxCDBuCat, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxCDBuSai, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxDKSat, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxKeoChamCuoi, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxCT, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxCL, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxTreCT, 3, 8);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxTreBL, 3, 9);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxTreBeToiSensor, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxThoiGianTreKeoCham, 3, 12);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxVongLoXo, 3, 13);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxTreDongTac, 3, 10);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxEncoder, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxDKPully, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxCDBuCat, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxCDBuSai, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxDKSat, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxKeoChamCuoi, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxCT, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxCL, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTreCT, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTreBL, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTreDongTac, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTreBeToiSensor, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxThoiGianTreKeoCham, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label19, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxVongLoXo, 4, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 14;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142859F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(604, 1168);
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(774, 623);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(73, 28);
+            this.label1.Location = new System.Drawing.Point(11, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 27);
+            this.label1.Size = new System.Drawing.Size(197, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "ENCODER (XUNG)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(98, 97);
+            this.label2.Location = new System.Drawing.Point(56, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 54);
+            this.label2.Size = new System.Drawing.Size(152, 50);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ĐƯỜNG KÍNH PULLY ( MM )";
+            this.label2.Text = "ĐƯỜNG KÍNH PULLY (MM)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(69, 180);
+            this.label3.Location = new System.Drawing.Point(52, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(223, 54);
+            this.label3.Size = new System.Drawing.Size(156, 50);
             this.label3.TabIndex = 2;
-            this.label3.Text = "CHIỀU DÀI BÙ CẮT ( MM )";
+            this.label3.Text = "CHIỀU DÀI BÙ CẮT (MM)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(67, 263);
+            this.label4.Location = new System.Drawing.Point(12, 283);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(227, 54);
+            this.label4.Size = new System.Drawing.Size(196, 50);
             this.label4.TabIndex = 3;
-            this.label4.Text = "CHIỀU DÀI BÙ SAI ( MM )";
+            this.label4.Text = "CHIỀU DÀI BÙ SAI (MM)";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(67, 346);
+            this.label5.Location = new System.Drawing.Point(8, 371);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 54);
+            this.label5.Size = new System.Drawing.Size(200, 50);
             this.label5.TabIndex = 4;
-            this.label5.Text = "ĐƯỜNG KÍNH SẮT ( MM )";
+            this.label5.Text = "ĐƯỜNG KÍNH SẮT (MM)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(73, 429);
+            this.label6.Location = new System.Drawing.Point(23, 459);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 54);
+            this.label6.Size = new System.Drawing.Size(185, 50);
             this.label6.TabIndex = 5;
-            this.label6.Text = "KÉO CHẬM CUỐI ( MM )";
+            this.label6.Text = "KÉO CHẬM CUỐI (MM)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 16F);
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(96, 526);
+            this.label7.Location = new System.Drawing.Point(61, 563);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 27);
+            this.label7.Size = new System.Drawing.Size(147, 25);
             this.label7.TabIndex = 6;
-            this.label7.Text = "CẮT TỚI ( mS )";
+            this.label7.Text = "CẮT TỚI (mS)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(96, 609);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 27);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "CẮT LUI ( mS )";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(71, 692);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(219, 27);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "TRỄ CẮT TỚI ( mS )";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(79, 775);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(203, 27);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "TRỄ BẺ LUI ( mS )";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(102, 1110);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(157, 27);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "VÒNG LÒ XO";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(79, 1010);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(202, 54);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "THỜI GIAN TRỄ KÉO CHẬM ( mS )";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(100, 927);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 54);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "BẺ TỚI DÙNG SENSOR";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(63, 844);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(234, 54);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "TRỄ ĐỘNG TÁC ( mS )";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxEncoder
             // 
-            this.textBoxEncoder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEncoder.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxEncoder.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEncoder.Location = new System.Drawing.Point(339, 15);
+            this.textBoxEncoder.Location = new System.Drawing.Point(214, 17);
             this.textBoxEncoder.MaxLength = 5;
             this.textBoxEncoder.Name = "textBoxEncoder";
             this.textBoxEncoder.Size = new System.Drawing.Size(134, 53);
@@ -474,9 +384,9 @@
             // 
             // textBoxDKPully
             // 
-            this.textBoxDKPully.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDKPully.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxDKPully.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDKPully.Location = new System.Drawing.Point(339, 98);
+            this.textBoxDKPully.Location = new System.Drawing.Point(214, 105);
             this.textBoxDKPully.MaxLength = 5;
             this.textBoxDKPully.Name = "textBoxDKPully";
             this.textBoxDKPully.Size = new System.Drawing.Size(134, 53);
@@ -486,9 +396,9 @@
             // 
             // textBoxCDBuCat
             // 
-            this.textBoxCDBuCat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCDBuCat.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxCDBuCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCDBuCat.Location = new System.Drawing.Point(339, 181);
+            this.textBoxCDBuCat.Location = new System.Drawing.Point(214, 193);
             this.textBoxCDBuCat.MaxLength = 5;
             this.textBoxCDBuCat.Name = "textBoxCDBuCat";
             this.textBoxCDBuCat.Size = new System.Drawing.Size(134, 53);
@@ -498,9 +408,9 @@
             // 
             // textBoxCDBuSai
             // 
-            this.textBoxCDBuSai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCDBuSai.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxCDBuSai.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCDBuSai.Location = new System.Drawing.Point(339, 264);
+            this.textBoxCDBuSai.Location = new System.Drawing.Point(214, 281);
             this.textBoxCDBuSai.MaxLength = 5;
             this.textBoxCDBuSai.Name = "textBoxCDBuSai";
             this.textBoxCDBuSai.Size = new System.Drawing.Size(134, 53);
@@ -510,9 +420,9 @@
             // 
             // textBoxDKSat
             // 
-            this.textBoxDKSat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDKSat.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxDKSat.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDKSat.Location = new System.Drawing.Point(339, 347);
+            this.textBoxDKSat.Location = new System.Drawing.Point(214, 369);
             this.textBoxDKSat.MaxLength = 5;
             this.textBoxDKSat.Name = "textBoxDKSat";
             this.textBoxDKSat.Size = new System.Drawing.Size(134, 53);
@@ -522,9 +432,9 @@
             // 
             // textBoxKeoChamCuoi
             // 
-            this.textBoxKeoChamCuoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxKeoChamCuoi.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxKeoChamCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKeoChamCuoi.Location = new System.Drawing.Point(339, 430);
+            this.textBoxKeoChamCuoi.Location = new System.Drawing.Point(214, 457);
             this.textBoxKeoChamCuoi.MaxLength = 5;
             this.textBoxKeoChamCuoi.Name = "textBoxKeoChamCuoi";
             this.textBoxKeoChamCuoi.Size = new System.Drawing.Size(134, 53);
@@ -534,9 +444,9 @@
             // 
             // textBoxCT
             // 
-            this.textBoxCT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCT.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCT.Location = new System.Drawing.Point(339, 513);
+            this.textBoxCT.Location = new System.Drawing.Point(214, 549);
             this.textBoxCT.MaxLength = 5;
             this.textBoxCT.Name = "textBoxCT";
             this.textBoxCT.Size = new System.Drawing.Size(134, 53);
@@ -544,11 +454,24 @@
             this.textBoxCT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxCT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxCT_MouseDown);
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label8.Location = new System.Drawing.Point(485, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(144, 25);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "CẮT LUI (mS)";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBoxCL
             // 
-            this.textBoxCL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCL.Location = new System.Drawing.Point(339, 596);
+            this.textBoxCL.Location = new System.Drawing.Point(635, 17);
             this.textBoxCL.MaxLength = 5;
             this.textBoxCL.Name = "textBoxCL";
             this.textBoxCL.Size = new System.Drawing.Size(134, 53);
@@ -556,11 +479,24 @@
             this.textBoxCL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxCL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxCL_MouseDown);
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(435, 119);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(194, 25);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "TRỄ CẮT TỚI (mS)";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBoxTreCT
             // 
-            this.textBoxTreCT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreCT.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxTreCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreCT.Location = new System.Drawing.Point(339, 679);
+            this.textBoxTreCT.Location = new System.Drawing.Point(635, 105);
             this.textBoxTreCT.MaxLength = 5;
             this.textBoxTreCT.Name = "textBoxTreCT";
             this.textBoxTreCT.Size = new System.Drawing.Size(134, 53);
@@ -568,11 +504,37 @@
             this.textBoxTreCT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTreCT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreCT_MouseDown);
             // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label10.Location = new System.Drawing.Point(456, 207);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(173, 25);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "TRỄ BẺ LUI (mS)";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label14.Location = new System.Drawing.Point(455, 283);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(174, 50);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "TRỄ ĐỘNG TÁC (mS)";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBoxTreBL
             // 
-            this.textBoxTreBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreBL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxTreBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreBL.Location = new System.Drawing.Point(339, 762);
+            this.textBoxTreBL.Location = new System.Drawing.Point(635, 193);
             this.textBoxTreBL.MaxLength = 5;
             this.textBoxTreBL.Name = "textBoxTreBL";
             this.textBoxTreBL.Size = new System.Drawing.Size(134, 53);
@@ -580,11 +542,36 @@
             this.textBoxTreBL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTreBL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreBL_MouseDown);
             // 
+            // textBoxTreDongTac
+            // 
+            this.textBoxTreDongTac.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxTreDongTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTreDongTac.Location = new System.Drawing.Point(635, 281);
+            this.textBoxTreDongTac.MaxLength = 5;
+            this.textBoxTreDongTac.Name = "textBoxTreDongTac";
+            this.textBoxTreDongTac.Size = new System.Drawing.Size(134, 53);
+            this.textBoxTreDongTac.TabIndex = 31;
+            this.textBoxTreDongTac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTreDongTac.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreDongTac_MouseDown);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label11.Location = new System.Drawing.Point(478, 371);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(151, 50);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "BẺ TỚI DÙNG SENSOR";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBoxTreBeToiSensor
             // 
-            this.textBoxTreBeToiSensor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTreBeToiSensor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxTreBeToiSensor.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreBeToiSensor.Location = new System.Drawing.Point(339, 928);
+            this.textBoxTreBeToiSensor.Location = new System.Drawing.Point(635, 369);
             this.textBoxTreBeToiSensor.MaxLength = 5;
             this.textBoxTreBeToiSensor.Name = "textBoxTreBeToiSensor";
             this.textBoxTreBeToiSensor.Size = new System.Drawing.Size(134, 53);
@@ -594,9 +581,9 @@
             // 
             // textBoxThoiGianTreKeoCham
             // 
-            this.textBoxThoiGianTreKeoCham.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxThoiGianTreKeoCham.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxThoiGianTreKeoCham.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxThoiGianTreKeoCham.Location = new System.Drawing.Point(339, 1011);
+            this.textBoxThoiGianTreKeoCham.Location = new System.Drawing.Point(635, 457);
             this.textBoxThoiGianTreKeoCham.MaxLength = 5;
             this.textBoxThoiGianTreKeoCham.Name = "textBoxThoiGianTreKeoCham";
             this.textBoxThoiGianTreKeoCham.Size = new System.Drawing.Size(134, 53);
@@ -604,29 +591,43 @@
             this.textBoxThoiGianTreKeoCham.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxThoiGianTreKeoCham.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxThoiGianTreKeoCham_MouseDown);
             // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label15.Location = new System.Drawing.Point(454, 459);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(175, 50);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "THỜI GIAN TRỄ KÉO CHẬM (mS)";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 16F);
+            this.label19.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label19.Location = new System.Drawing.Point(483, 563);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(146, 25);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "VÒNG LÒ XO";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBoxVongLoXo
             // 
-            this.textBoxVongLoXo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxVongLoXo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxVongLoXo.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVongLoXo.Location = new System.Drawing.Point(339, 1097);
+            this.textBoxVongLoXo.Location = new System.Drawing.Point(635, 549);
             this.textBoxVongLoXo.MaxLength = 5;
             this.textBoxVongLoXo.Name = "textBoxVongLoXo";
             this.textBoxVongLoXo.Size = new System.Drawing.Size(134, 53);
             this.textBoxVongLoXo.TabIndex = 36;
             this.textBoxVongLoXo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxVongLoXo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxVongLoXo_MouseDown);
-            // 
-            // textBoxTreDongTac
-            // 
-            this.textBoxTreDongTac.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxTreDongTac.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTreDongTac.Location = new System.Drawing.Point(339, 845);
-            this.textBoxTreDongTac.MaxLength = 5;
-            this.textBoxTreDongTac.Name = "textBoxTreDongTac";
-            this.textBoxTreDongTac.Size = new System.Drawing.Size(134, 53);
-            this.textBoxTreDongTac.TabIndex = 31;
-            this.textBoxTreDongTac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxTreDongTac.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxTreDongTac_MouseDown);
             // 
             // tabPageRunManual
             // 
@@ -1766,18 +1767,6 @@
             this.textBoxChieuDaiBuSaiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxChieuDaiBuSaiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxChieuDaiBuSaiInox_MouseDown);
             // 
-            // textBoxKeoChamCuoiInox
-            // 
-            this.textBoxKeoChamCuoiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxKeoChamCuoiInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKeoChamCuoiInox.Location = new System.Drawing.Point(477, 190);
-            this.textBoxKeoChamCuoiInox.MaxLength = 5;
-            this.textBoxKeoChamCuoiInox.Name = "textBoxKeoChamCuoiInox";
-            this.textBoxKeoChamCuoiInox.Size = new System.Drawing.Size(131, 53);
-            this.textBoxKeoChamCuoiInox.TabIndex = 33;
-            this.textBoxKeoChamCuoiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxKeoChamCuoiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxKeoChamCuoiInox_MouseDown);
-            // 
             // textBoxTreCatToiInox
             // 
             this.textBoxTreCatToiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1929,6 +1918,18 @@
             this.button1.TabIndex = 47;
             this.button1.Text = "LƯU";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBoxKeoChamCuoiInox
+            // 
+            this.textBoxKeoChamCuoiInox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxKeoChamCuoiInox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKeoChamCuoiInox.Location = new System.Drawing.Point(477, 190);
+            this.textBoxKeoChamCuoiInox.MaxLength = 5;
+            this.textBoxKeoChamCuoiInox.Name = "textBoxKeoChamCuoiInox";
+            this.textBoxKeoChamCuoiInox.Size = new System.Drawing.Size(131, 53);
+            this.textBoxKeoChamCuoiInox.TabIndex = 33;
+            this.textBoxKeoChamCuoiInox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxKeoChamCuoiInox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxKeoChamCuoiInox_MouseDown);
             // 
             // buttonSaveSettings
             // 

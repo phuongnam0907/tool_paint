@@ -95,6 +95,12 @@
     <Compile Include="FormMaterial.Designer.cs">
       <DependentUpon>FormMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotice.Designer.cs">
+      <DependentUpon>FormNotice.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPaint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,7 @@
     <Compile Include="WarningConnect.Designer.cs">
       <DependentUpon>WarningConnect.cs</DependentUpon>
     </Compile>
+    <Compile Include="XmlClass.cs" />
     <EmbeddedResource Include="ExitApp.resx">
       <DependentUpon>ExitApp.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMaterial.resx">
       <DependentUpon>FormMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotice.resx">
+      <DependentUpon>FormNotice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaint.resx">
       <DependentUpon>FormPaint.cs</DependentUpon>
@@ -373,6 +383,8 @@
     </Content>
     <Content Include="icon.ico" />
     <Content Include="Resources\icon.png" />
+    <None Include="Resources\okP.png" />
+    <None Include="Resources\okN.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

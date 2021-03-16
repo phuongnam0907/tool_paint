@@ -294,5 +294,6 @@ namespace Tool
                 buttonSaveSettings.Enabled = false;
             }
         }
+
     }
 }
