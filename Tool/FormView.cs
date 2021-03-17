@@ -33,7 +33,6 @@ namespace Tool
         private bool isKeypadShown = false;
         private bool isWarningConnect = false;
         Keypad numKey = new Keypad();
-        private string dataViewConnectString;
         private Thread backgroundThread;
         private Thread sendDataThread;
         private WarningConnect warningConnect;
@@ -68,7 +67,6 @@ namespace Tool
 
             pictureBoxShow.Paint += pictureBoxShow_Paint;
 
-            dataViewConnectString = ConfigurationManager.ConnectionStrings["Tool.Properties.Settings.DataGocCanhConnectionString"].ConnectionString;
 
             ThreadStart ts = new ThreadStart(checkSerialConnection);
             backgroundThread = new Thread(ts);

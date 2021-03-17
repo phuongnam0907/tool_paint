@@ -66,11 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlExtensions.cs" />
-    <Compile Include="DataGocCanhDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataGocCanhDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ExitApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,17 +191,6 @@
     <EmbeddedResource Include="WarningConnect.resx">
       <DependentUpon>WarningConnect.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataGocCanhDataSet.xsc">
-      <DependentUpon>DataGocCanhDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataGocCanhDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataGocCanhDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataGocCanhDataSet.xss">
-      <DependentUpon>DataGocCanhDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -374,13 +358,6 @@
     <None Include="Resources\enter.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataGocCanh.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DataGocCanh_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DataGocCanh.mdf</DependentUpon>
-    </Content>
     <Content Include="icon.ico" />
     <Content Include="Resources\icon.png" />
     <None Include="Resources\okP.png" />

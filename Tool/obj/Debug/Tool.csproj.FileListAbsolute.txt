@@ -1,5 +1,3 @@
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh.mdf
-C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\DataGocCanh_log.ldf
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.exe.config
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.exe
 C:\Nam\VisualStudioProjects\LotusMachineApp\Tool\bin\Debug\Tool.pdb
